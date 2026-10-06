@@ -14,7 +14,7 @@
   // Row-house paint colours for lines that don't bring their own.
   const PALETTE = ["#d7263d", "#1b6ca8", "#e0a100", "#2e8b57", "#7b3fa0", "#e86a1a", "#14a0a0", "#d94f93",
     "#4a6fe3", "#8a5a2b", "#5c9e2e", "#b0306a"];
-  const HEADWAYS = [5, 6, 7.5, 10, 12, 15, 20, 30, 40, 60, 90, 120];
+  const HEADWAYS = [5, 6, 7.5, 10, 12, 15, 20, 30, 40, 45, 60, 90, 120];
   const DATA_URL = new URLSearchParams(location.search).get("data") || "data/plan.json";
 
   const $ = (id) => document.getElementById(id);
@@ -175,13 +175,13 @@
   const renderer = L.canvas({ padding: 0.5, tolerance: 6 });
 
   function initMap() {
-    map = L.map("map", { zoomControl: true, preferCanvas: true, renderer });
+    map = L.map("map", { zoomControl: true, preferCanvas: true, renderer, zoomSnap: 0.25 });
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
       maxZoom: 16,
       attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
     }).addTo(map);
     const pts = D.places.map((p) => [p.lat, p.lon]);
-    map.fitBounds(L.latLngBounds(pts), { padding: [20, 20] });
+    map.fitBounds(L.latLngBounds(pts), { padding: [12, 12] });
 
     bgLayer = L.layerGroup().addTo(map);
     for (const [u, v] of D.edges) {
@@ -199,7 +199,7 @@
         .on("click", () => openPlace(p))
         .addTo(placeLayer);
     }
-    map.on("zoomend", updateZoomStyles);
+    map.on("zoomend", () => { updateZoomStyles(); drawHubs(); });
     updateZoomStyles();
   }
 
@@ -253,13 +253,7 @@
     placeLayer.eachLayer((m) => m.bringToFront());
     stopLayer.eachLayer((m) => m.bringToFront());
 
-    for (const h of s.hubs || []) {
-      const p = placeById.get(h);
-      L.circleMarker([p.lat, p.lon], { radius: 8, color: "#1c2a33", weight: 3, fillColor: "#1c2a33", fillOpacity: 1, renderer })
-        .bindTooltip(esc(p.name), { permanent: map.getZoom() >= 12, direction: "right", offset: [8, 0], className: "hub-label" })
-        .on("click", (ev) => { L.DomEvent.stop(ev); openPlace(p); })
-        .addTo(hubLayer);
-    }
+    drawHubs();
 
     // Stops that lost all service nearby.
     const bph = new Set();
@@ -268,6 +262,34 @@
       if (!p.deps) continue;
       const ok = (near.get(p.id) || []).some((q) => bph.has(q));
       if (!ok) L.circleMarker([p.lat, p.lon], { radius: 5, color: "#b3261e", weight: 2, fillColor: "#b3261e", fillOpacity: 0.25, renderer, interactive: false }).addTo(gapLayer);
+    }
+  }
+
+  // "Military Rd at St Thomas Church" -> "Military Rd" for map labels; popups keep the full name.
+  const shortName = (n) => n.replace(/\s+(at|before|after|opp|near|bldg|across from)\s.*$/i, "").trim() || n;
+
+  function drawHubs() {
+    if (!hubLayer) return;
+    hubLayer.clearLayers();
+    const z = map.getZoom();
+    const r = z < 12 ? 5 : 7;
+    const placed = [];
+    for (const h of scenario().hubs || []) {
+      const p = placeById.get(h);
+      const m = L.circleMarker([p.lat, p.lon], { radius: r, color: "#1c2a33", weight: 3, fillColor: "#1c2a33", fillOpacity: 1, renderer })
+        .on("click", (ev) => { L.DomEvent.stop(ev); openPlace(p); })
+        .addTo(hubLayer);
+      // Label it unless it would overlap a label already on the map.
+      const label = shortName(p.name);
+      const pt = map.latLngToContainerPoint([p.lat, p.lon]);
+      const box = { x: pt.x + 10, y: pt.y - 10, w: label.length * 7 + 14, h: 22 };
+      const hit = placed.some((b) => box.x < b.x + b.w && b.x < box.x + box.w && box.y < b.y + b.h && b.y < box.y + box.h);
+      if (z >= 11 && !hit) {
+        placed.push(box);
+        m.bindTooltip(esc(label), { permanent: true, direction: "right", offset: [8, 0], className: "hub-label" });
+      } else {
+        m.bindTooltip(esc(p.name), { direction: "right", offset: [8, 0], className: "hub-label" });
+      }
     }
   }
 
@@ -414,6 +436,44 @@
       : "";
   }
 
+  // One control for a whole group of lines (all trunks, all feeders, all of today's routes).
+  function renderGroups() {
+    const s = scenario();
+    const groups = s.id === "today" ? [["route", "All routes"]] : [["trunk", "All trunk lines"], ["feeder", "All feeder lines"]];
+    let html = "";
+    for (const [kind, label] of groups) {
+      const ls = current.lines.filter((x) => x.line.kind === kind);
+      if (!ls.length) continue;
+      const hs = [...new Set(ls.map((x) => x.h))];
+      const same = hs.length === 1;
+      const h = same ? hs[0] : null;
+      html += `<div class="group-row"><span>${label}</span>
+        <div class="stepper" data-kind="${kind}">
+          <button data-dir="-1" aria-label="${label} less often">−</button>
+          <output>${same ? (h ? `${h} min` : "off") : "mixed"}${same ? "" : "<small>tap to even out</small>"}</output>
+          <button data-dir="1" aria-label="${label} more often">+</button>
+        </div></div>`;
+    }
+    $("groups").innerHTML = html;
+    $("groups").querySelectorAll(".stepper").forEach((st) => st.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+      const kind = st.dataset.kind;
+      const ls = current.lines.filter((x) => x.line.kind === kind);
+      const hs = [...new Set(ls.map((x) => x.h))];
+      // Mixed: snap everything to the most common current value first; otherwise step it.
+      let target;
+      if (hs.length > 1) {
+        const counts = new Map();
+        ls.forEach((x) => counts.set(x.h, (counts.get(x.h) || 0) + 1));
+        target = [...counts.entries()].sort((a, b) => b[1] - a[1])[0][0];
+        target = step(target, +b.dataset.dir);
+      } else {
+        target = step(hs[0], +b.dataset.dir);
+      }
+      for (const x of ls) { lineEdit(x.line.id).h = target; cleanup(x.line.id); }
+      update();
+    })));
+  }
+
   function renderList() {
     const s = scenario();
     const anyEdits = Object.keys(editsFor(state.scenario)).length > 0;
@@ -496,7 +556,8 @@
     if (L2) {
       const ll = L2.path.map((pid) => { const p = placeById.get(pid); return [p.lat, p.lon]; });
       map.fitBounds(L.latLngBounds(ll), { padding: [40, 40], maxZoom: 15 });
-      $("panel").scrollTop = 0;
+      if (matchMedia("(max-width: 760px)").matches) $("detail").scrollIntoView({ block: "start" });
+      else $("panel").scrollTop = 0;
     }
   }
 
@@ -563,6 +624,7 @@
     current = totals(state.scenario);
     renderScenarios();
     renderScore();
+    renderGroups();
     renderList();
     renderDetail();
     drawLines();

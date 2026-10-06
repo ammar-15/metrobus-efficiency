@@ -1,14 +1,15 @@
 # metrobus-efficiency
 
 Redesigns the Metrobus (St. John's, NL) network as **frequent trunk lines between major hubs** plus
-**small feeder loops** that start and end at a hub — the same idea as the TTC's subway-plus-buses,
-but with buses on both layers.
+**feeder lines** that carry today's neighbourhood routes to the nearest trunk stop. It's the same idea as the
+TTC's subway-plus-buses, with buses on both layers.
 
-It reads Metrobus's public GTFS schedule, finds the busiest places, connects them, and redraws every other
-stop into loops, then compares buses and service hours against today's schedule.
+It reads Metrobus's public GTFS schedule, finds the busiest places, connects them, turns the rest of today's
+routes into feeders, then compares buses, service hours and cost against today. An editable web map lets
+anyone change frequencies and stops and see what it costs.
 
-![example output](docs/example_plan.png)
-<sub>Example output on the built-in synthetic test city, not real Metrobus data.</sub>
+![plan from the real Metrobus feed](results/plan.png)
+<sub>10-hub plan from the current Metrobus feed. Full numbers in [results/summary.md](results/summary.md).</sub>
 
 ## Quick start
 
@@ -25,7 +26,7 @@ The first run downloads the feed into `data/`. Results land in `output/`:
 
 | File | What it is |
 |---|---|
-| `map.html` | Interactive map: today's network (grey), trunks (solid), feeder loops (dashed), hubs (stars). Toggle layers top-right. |
+| `map.html` | Quick map: today's network (grey), trunks (solid), feeders (dashed), hubs (stars). The editable map is in `docs/`. |
 | `plan.png` | Static picture of the plan for slides or a council submission. |
 | `summary.md` | Today vs proposed: peak buses, weekday service hours, share of places with 15-min-or-better service. |
 | `lines.csv` | Every proposed line: hubs, stops, km, running time, headway, buses needed. |
@@ -79,9 +80,10 @@ python -m http.server -d docs 8000      # then open http://localhost:8000
    tree forces a long detour, then cut the network into lines (longest first). Lines longer than
    `MAX_TRUNK_MIN` split at a middle hub; very short ones join a neighbour. Trunk stops are consolidated to
    ~`TRUNK_STOP_SPACING_M` apart, always keeping hubs and preferring the busiest stops.
-5. **Feeder loops**: every place more than a short walk from a trunk stop is assigned to the hub it reaches
-   fastest. Around each hub, places are swept by compass direction into loops no longer than `MAX_LOOP_MIN`,
-   and each loop is ordered with nearest-neighbour + 2-opt.
+5. **Feeder lines**: today's routes are cut where they reach trunk territory, and the parts that serve stops
+   more than a short walk from a trunk become feeders, extended along the route to the nearest trunk stop so
+   riders can transfer. Routes that go out one way and back another become one loop; pieces split by a short
+   trunk stretch are joined. Streets, stops and running times all come from today's schedule.
 6. **Compare**: buses = cycle time × layover ÷ headway; service hours = hours of buses in motion, the same basis
    as today's figure.
 
@@ -111,7 +113,7 @@ for roughly today's number of buses.
 - Travel times are today's scheduled times. No bus lanes or signal priority are assumed, so trunk times
   are conservative.
 - "Peak buses today" counts trips running at the same moment, a lower bound on today's fleet.
-- Feeder loops follow streets buses use today; new streets aren't considered.
+- Feeders follow streets buses use today; new streets aren't considered.
 - It's a sketch for discussion, not an operating plan.
 
 ## Tests

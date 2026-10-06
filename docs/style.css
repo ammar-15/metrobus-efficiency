@@ -116,6 +116,12 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
 .ln-sub b { color: var(--ink); font-weight: 600; }
 .group-label { font-size: 13px; font-weight: 600; color: var(--muted); padding: 14px 0 2px; border-bottom: 1px solid var(--rule); display: block; }
 
+.groups { margin-top: 10px; padding: 12px 14px; background: var(--fog); border-radius: 10px; }
+.group-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.group-row + .group-row { margin-top: 8px; }
+.group-row span { font-weight: 600; font-size: 14px; }
+.groups .stepper { background: var(--paper); }
+
 /* Route badge: the one loud thing. Shaped like a stop-sign route plate. */
 .badge {
   flex: none;
@@ -249,6 +255,7 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
     content: ""; position: absolute; left: 7px; right: 7px; top: 7px; height: 4px; border-radius: 2px; background: var(--rule);
   }
   .app.map-big .map { height: 78dvh; }
+  .leaflet-control-attribution { font-size: 9px; max-width: 70vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .head h1 { font-size: 25px; }
   .stat .v { font-size: 24px; }
 }
