@@ -32,6 +32,41 @@ The first run downloads the feed into `data/`. Results land in `output/`:
 | `stops_plan.csv` | Every current stop and what happens to it: trunk stop, feeder stop, consolidated, or walk to a nearby stop. |
 | `network.geojson` | The plan for QGIS, geojson.io, Felt, etc. |
 
+## The editable web map
+
+`docs/` is a small website (no build step) where anyone can play with the network:
+
+- switch between **today's routes** and proposed plans with **6 to 12 hubs**
+- change how often any line runs with the − / + buttons, or switch a line off
+- tap a line, then tap any stop on the map to **add it to that line**, or remove stops from the list
+- watch **buses on the road, weekday bus hours, yearly cost and frequent-service coverage** update against today
+- **copy a link** that saves your exact version, to share or send to council
+
+A GitHub Action (`.github/workflows/build-map.yml`) downloads the real feed on every push and every Monday,
+runs the planner, and commits `docs/data/plan.json` and `results/`.
+
+**Put it online:** in the repo, go to Settings → Pages, set *Source* to *Deploy from a branch*, branch `main`,
+folder `/docs`, and save. The map will be at `https://ammar-15.github.io/metrobus-efficiency/`.
+
+**Run it locally:**
+
+```bash
+python -m metrobus_efficiency --web     # writes docs/data/plan.json
+python -m http.server -d docs 8000      # then open http://localhost:8000
+```
+
+### How the web map counts
+
+- **Buses** = round-trip minutes × recovery time ÷ minutes between buses, rounded up, per line.
+- **Bus hours** = service hours × round-trip minutes ÷ minutes between buses. Today's routes use their own
+  first-to-last trip span and their midday frequency.
+- **Yearly cost** scales weekday bus hours so today's routes match Metrobus's 156,004 revenue hours in 2025,
+  at $146.52 per hour (2025 financial statements). Change the rate under *Assumptions*.
+- **Coverage** = share of today's stops within 400 m of a stop with a bus every 15 minutes or better,
+  all lines combined.
+- **Adding a stop** inserts it where it adds the least detour; the extra distance at the line's average
+  speed, plus 20 s for the stop itself, is added each way.
+
 ## How it works
 
 1. **Load** the Metrobus GTFS feed and keep the busiest normal weekday.

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metrobus, redrawn</title>
+  <meta name="description" content="Change bus frequencies and stops on a redesigned Metrobus network for St. John's, and see the buses, hours and cost it takes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="map" class="map" aria-label="Map of the bus network"></div>
+
+    <aside class="panel" id="panel">
+      <button class="grip" id="grip" aria-label="Expand or collapse the panel" aria-expanded="true"></button>
+
+      <header class="head">
+        <h1>Metrobus, redrawn</h1>
+        <p class="lede">Pick a network, then change how often each line runs or which stops it serves. The numbers below update as you go.</p>
+        <div class="scenarios" id="scenarios" role="radiogroup" aria-label="Network"></div>
+        <p class="scenario-note" id="scenario-note"></p>
+      </header>
+
+      <section class="score" aria-live="polite" aria-label="Totals compared with today">
+        <div class="stat"><span class="v" id="s-buses">–</span><span class="k">buses on the road</span><span class="d" id="d-buses"></span></div>
+        <div class="stat"><span class="v" id="s-hours">–</span><span class="k">bus hours each weekday</span><span class="d" id="d-hours"></span></div>
+        <div class="stat"><span class="v" id="s-cost">–</span><span class="k">yearly operating cost, est.</span><span class="d" id="d-cost"></span></div>
+        <div class="stat"><span class="v" id="s-freq">–</span><span class="k">of stops have a bus every 15 min or better nearby</span><span class="d" id="d-freq"></span></div>
+        <p class="gap" id="s-gap"></p>
+      </section>
+
+      <section class="lines" id="lines-view">
+        <div class="lines-head">
+          <h2 id="lines-title">Lines</h2>
+          <button class="link" id="reset">Undo all changes</button>
+        </div>
+        <ol class="line-list" id="line-list"></ol>
+      </section>
+
+      <section class="detail" id="detail" hidden>
+        <button class="back" id="back">All lines</button>
+        <div class="detail-top">
+          <span class="badge big" id="d-badge"></span>
+          <div>
+            <h2 id="d-name"></h2>
+            <p class="via" id="d-via"></p>
+          </div>
+        </div>
+        <div class="freq-row">
+          <span>Runs</span>
+          <div class="stepper" id="d-stepper"></div>
+        </div>
+        <dl class="facts" id="d-facts"></dl>
+        <p class="hint" id="d-hint">Tap any stop on the map to add it to this line, or remove stops below.</p>
+        <h3>Stops</h3>
+        <ol class="stops" id="d-stops"></ol>
+      </section>
+
+      <details class="settings">
+        <summary>Assumptions</summary>
+        <label>New lines run <input type="number" id="o-hours" min="6" max="24" step="0.5"> hours a weekday</label>
+        <label>Recovery time at the end of each trip <input type="number" id="o-layover" min="0" max="50" step="1"> %</label>
+        <label>Each stop adds <input type="number" id="o-dwell" min="0" max="120" step="5"> seconds</label>
+        <label>Cost per bus hour <input type="number" id="o-cost" min="50" max="400" step="1"> $</label>
+        <label>Walking distance to a stop <input type="number" id="o-walk" min="100" max="1000" step="50"> m</label>
+      </details>
+
+      <footer class="foot">
+        <button class="primary" id="share">Copy link to this version</button>
+        <p class="fine" id="fine"></p>
+      </footer>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

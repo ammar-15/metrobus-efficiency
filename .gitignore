@@ -1,6 +1,6 @@
-.env
-data/
-output/
+/.env
+/data/
+/output/
 __pycache__/
 *.pyc
 .pytest_cache/

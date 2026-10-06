@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 import time
 import webbrowser
 
@@ -14,6 +15,7 @@ from .network import build_network
 from .plan import build_feeders, build_trunks, pick_hubs
 from .report import write_outputs
 from .staticmap import build_png
+from .web_export import build_web_data, write_web_data
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -25,6 +27,12 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--trunk-headway", type=float, help="minutes between trunk buses")
     ap.add_argument("--feeder-headway", type=float, help="minutes between feeder buses")
     ap.add_argument("--open", action="store_true", help="open the map in a browser when done")
+    ap.add_argument(
+        "--web",
+        nargs="?",
+        const="docs/data/plan.json",
+        help="also write data for the editable web map (default: docs/data/plan.json)",
+    )
     args = ap.parse_args(argv)
 
     cfg = Config.from_env(args.env)
@@ -57,6 +65,9 @@ def main(argv: list[str] | None = None) -> None:
     write_outputs(cfg.output_dir, feed, net, hubs, trunks, feeders, cur, prop, lines_df, cfg)
     map_path = build_map(net, hubs, trunks, feeders, cfg, cfg.output_dir / "map.html")
     build_png(net, hubs, trunks, feeders, cfg, cfg.output_dir / "plan.png")
+    if args.web:
+        web_path = write_web_data(Path(args.web), build_web_data(feed, net, cfg))
+        print(f"Web map data: {web_path} (open docs/index.html through a local server, see README)")
 
     print(
         f"\nPeak buses: today {cur['peak_buses']} -> proposed {prop['peak_buses']} "

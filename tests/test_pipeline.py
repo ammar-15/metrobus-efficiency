@@ -40,3 +40,22 @@ def test_cli_writes_outputs(tmp_path: Path, monkeypatch):
     main(["--gtfs", str(gtfs)])
     for name in ("map.html", "plan.png", "summary.md", "lines.csv", "stops_plan.csv", "network.geojson", "metrics.json"):
         assert (tmp_path / "out" / name).exists(), name
+
+
+def test_web_export(tmp_path: Path):
+    from metrobus_efficiency.web_export import build_web_data
+
+    feed = load_feed(make_feed(tmp_path / "feed.zip"))
+    cfg = Config()
+    net = build_network(feed, cfg)
+    data = build_web_data(feed, net, cfg)
+    ids = {p["id"] for p in data["places"]}
+    assert data["scenarios"][0]["id"] == "today"
+    assert len(data["scenarios"]) >= 2
+    for s in data["scenarios"]:
+        for line in s["lines"]:
+            assert set(line["path"]) <= ids
+            assert line["stop_idx"] == sorted(line["stop_idx"])
+            assert all(0 <= i < len(line["path"]) for i in line["stop_idx"])
+            assert line["cycle_min"] >= line["run_min"] > 0
+            assert line["headway_min"] > 0
