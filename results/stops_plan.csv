@@ -1,71 +1,71 @@
 stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
-2646,Seaborn St opp McLaren Pl,47.56552,-52.76978,feeder stop,F16,820
+2646,Seaborn St opp McLaren Pl,47.56552,-52.76978,feeder stop,F13,820
 1415,The Boulevard opp CNIB,47.579881,-52.699239,feeder stop,F5,527
 1835,Military Rd at Bannerman Park,47.57014,-52.707104,trunk stop,T2,0
 2350,Waterford Bridge Rd before Westmount Pl,47.53346,-52.738043,walk to nearby stop,,484
 2825,Campbell Ave before Cashin Ave,47.554389,-52.733489,walk to nearby stop,,150
 3220,Higgins Line before Fox Ave,47.591528,-52.728314,"removed (trunk passes, stop consolidated)",,169
 3225,Higgins Line opp Pinsent Pl,47.593393,-52.728291,"removed (trunk passes, stop consolidated)",,173
-3230,Higgins Line before Portugal Cove Rd,47.594702,-52.727241,trunk stop,"T1, F14",0
+3230,Higgins Line before Portugal Cove Rd,47.594702,-52.727241,trunk stop,"T1, F12",0
 3240,Newfoundland Dr after Kingfisher Pl,47.59725,-52.720328,walk to nearby stop,,237
-3245,Newfoundland Dr after Stirling Cres,47.59744,-52.717186,trunk stop,"T1, F24, F28",0
+3245,Newfoundland Dr after Stirling Cres,47.59744,-52.717186,trunk stop,"T1, F21, F25",0
 3250,Newfoundland Dr before Torbay Rd,47.598808,-52.712164,"removed (trunk passes, stop consolidated)",,103
 3255,Majors Path at Lockheed St,47.610862,-52.724339,walk to nearby stop,,1565
-3260,Majors Path at Eastern Health Bldg,47.610154,-52.725164,feeder stop,"F11, F24",1525
-3265,Majors Path after Hebron Way,47.607769,-52.732194,feeder stop,F24,1411
-3295,Viscount St after Portugal Cove Rd,47.610236,-52.751908,feeder stop,F24,2519
-3310,Airport Heights Dr after Viscount St,47.605394,-52.756228,feeder stop,F24,2470
-3315,Airport Heights Dr before Firdale Dr,47.605114,-52.750541,feeder stop,F24,2083
-3320,Airport Heights Dr before Otter Dr,47.604972,-52.747552,feeder stop,F24,1909
-3325,Airport Heights Dr before Gairlock St,47.602344,-52.743758,feeder stop,F24,1481
-3330,Airport Heights Dr before Halls Rd,47.60114,-52.74054,feeder stop,F24,1215
+3260,Majors Path at Eastern Health Bldg,47.610154,-52.725164,feeder stop,"F9, F21",1525
+3265,Majors Path after Hebron Way,47.607769,-52.732194,feeder stop,F21,1411
+3295,Viscount St after Portugal Cove Rd,47.610236,-52.751908,feeder stop,F21,2519
+3310,Airport Heights Dr after Viscount St,47.605394,-52.756228,feeder stop,F21,2470
+3315,Airport Heights Dr before Firdale Dr,47.605114,-52.750541,feeder stop,F21,2083
+3320,Airport Heights Dr before Otter Dr,47.604972,-52.747552,feeder stop,F21,1909
+3325,Airport Heights Dr before Gairlock St,47.602344,-52.743758,feeder stop,F21,1481
+3330,Airport Heights Dr before Halls Rd,47.60114,-52.74054,feeder stop,F21,1215
 3335,Branscombe St after Halls Rd,47.598691,-52.740629,walk to nearby stop,,1084
 3340,Branscombe St civic 60,47.597316,-52.73642,walk to nearby stop,,733
-3350,Majors Path at International Pl,47.60439,-52.735605,feeder stop,F24,1243
-3355,Majors Path before Hebron Way,47.607989,-52.731708,feeder stop,F24,1411
-3370,Torbay Rd after Penney Ln,47.603964,-52.717753,feeder stop,F24,659
-3380,Newfoundland Dr before Stirling Cres,47.597633,-52.717203,trunk stop,"T1, F24, F28",0
+3350,Majors Path at International Pl,47.60439,-52.735605,feeder stop,F21,1243
+3355,Majors Path before Hebron Way,47.607989,-52.731708,feeder stop,F21,1411
+3370,Torbay Rd after Penney Ln,47.603964,-52.717753,feeder stop,F21,659
+3380,Newfoundland Dr before Stirling Cres,47.597633,-52.717203,trunk stop,"T1, F21, F25",0
 3385,Newfoundland Dr before Sackville St,47.597441,-52.721433,"removed (trunk passes, stop consolidated)",,218
-3395,Bells Turn,47.594577,-52.729042,walk to nearby stop,,122
-3400,Hunts Lane after Portugal Cove Pl,47.596486,-52.730722,walk to nearby stop,,315
-3405,Hunts Lane opp Kelly St,47.595097,-52.732703,walk to nearby stop,,398
-3410,Gloucester St after Portugal Cove Pl,47.594139,-52.734947,feeder stop,F15,567
-3415,Gloucester St opp Alice Dr,47.59327,-52.736418,feeder stop,F15,580
+3395,Bells Turn,47.594577,-52.729042,feeder stop,F12,122
+3400,Hunts Lane after Portugal Cove Pl,47.596486,-52.730722,feeder stop,F12,315
+3405,Hunts Lane opp Kelly St,47.595097,-52.732703,feeder stop,F12,398
+3410,Gloucester St after Portugal Cove Pl,47.594139,-52.734947,feeder stop,F12,567
+3415,Gloucester St opp Alice Dr,47.59327,-52.736418,feeder stop,F12,580
 3420,Gloucester St civic 63,47.590624,-52.737265,walk to nearby stop,,353
-3425,Forest Rd after Quidi Vidi Rd,47.575319,-52.697542,feeder stop,F22,421
-3430,Forest Rd opp Miller Ctr,47.576232,-52.695545,feeder stop,F22,564
+3425,Forest Rd after Quidi Vidi Rd,47.575319,-52.697542,feeder stop,F19,421
+3430,Forest Rd opp Miller Ctr,47.576232,-52.695545,feeder stop,F19,564
 3435,Empire Ave near Forest Rd,47.57447,-52.69968,walk to nearby stop,,302
 3440,Bonaventure Ave opp The Rooms,47.566992,-52.712383,walk to nearby stop,,292
 3445,Bonaventure Ave before Fleming St,47.56998,-52.7177,walk to nearby stop,,449
 3450,Bonaventure Ave before Barnes Rd,47.569076,-52.715286,walk to nearby stop,,336
 3455,Bonaventure Ave before Merrymeeting Rd,47.568261,-52.714347,walk to nearby stop,,272
-3460,Bonaventure Ave before Empire Ave,47.57002,-52.71946,feeder stop,F23,506
+3460,Bonaventure Ave before Empire Ave,47.57002,-52.71946,feeder stop,F20,506
 3465,Bonaventure Ave at The Rooms,47.56681,-52.71218,walk to nearby stop,,292
-3470,Whiteway St,47.570669,-52.725325,feeder stop,F23,713
+3470,Whiteway St,47.570669,-52.725325,feeder stop,F20,713
 3475,Empire Ave after Kings Bridge Rd,47.574992,-52.701871,walk to nearby stop,,122
 3476,Forest Rd after Empire Ave,47.57449,-52.69887,walk to nearby stop,,354
-3480,Rodney St,47.57078,-52.72721,feeder stop,F23,684
-3490,Allandale Rd near Burtons Pond Rd,47.57491,-52.72676,feeder stop,F23,673
-3495,Forest Rd at King Edward Pl,47.576862,-52.693719,feeder stop,F22,715
-3500,Baird Pl at Wicklow St,47.566978,-52.747875,feeder stop,"F17, F23",658
-3510,Baird Pl at Oxen Pond Rd,47.565317,-52.749072,feeder stop,"F17, F23",520
-3515,Forest Rd civic 180,47.57879,-52.68782,feeder stop,F22,1198
+3480,Rodney St,47.57078,-52.72721,feeder stop,F20,684
+3490,Allandale Rd near Burtons Pond Rd,47.57491,-52.72676,feeder stop,F20,673
+3495,Forest Rd at King Edward Pl,47.576862,-52.693719,feeder stop,F19,715
+3500,Baird Pl at Wicklow St,47.566978,-52.747875,feeder stop,"F14, F20",658
+3510,Baird Pl at Oxen Pond Rd,47.565317,-52.749072,feeder stop,"F14, F20",520
+3515,Forest Rd civic 180,47.57879,-52.68782,feeder stop,F19,1198
 3520,Oxen Pond Rd before Larkhall St,47.565564,-52.752615,walk to nearby stop,,383
 3530,Larkhall St before Donegal Pl,47.563697,-52.754958,walk to nearby stop,,171
 3535,Regatta Terr before Regiment Rd,47.58062,-52.682725,walk to nearby stop,,1614
 3540,Cuckholds Cove Rd before Maxwell Pl,47.579625,-52.681228,walk to nearby stop,,1691
-3550,Forest Rd opp civic 200,47.579669,-52.685378,feeder stop,F22,1392
-3555,Forest Rd civic 179,47.57895,-52.687636,feeder stop,F22,1198
-3560,Forest Rd civic 153,47.578017,-52.690556,feeder stop,F22,969
-3565,Forest Rd before Lake View Ave,47.577,-52.69363,feeder stop,F22,715
-3570,Polina Rd before Neptune Rd,47.557692,-52.750664,feeder stop,F19,492
-3575,Baccalieu St,47.556561,-52.750731,feeder stop,F19,571
-3577,Old Pennywell Rd at Prospero Pl,47.556219,-52.749046,feeder stop,F19,574
-3580,Old Pennywell Rd before Prospero Pl,47.556174,-52.749125,feeder stop,F19,574
-3585,Portugal Cove Rd opp Chancellor Pk,47.593881,-52.725633,walk to nearby stop,,173
+3550,Forest Rd opp civic 200,47.579669,-52.685378,feeder stop,F19,1392
+3555,Forest Rd civic 179,47.57895,-52.687636,feeder stop,F19,1198
+3560,Forest Rd civic 153,47.578017,-52.690556,feeder stop,F19,969
+3565,Forest Rd before Lake View Ave,47.577,-52.69363,feeder stop,F19,715
+3570,Polina Rd before Neptune Rd,47.557692,-52.750664,feeder stop,F16,492
+3575,Baccalieu St,47.556561,-52.750731,feeder stop,F16,571
+3577,Old Pennywell Rd at Prospero Pl,47.556219,-52.749046,feeder stop,F16,574
+3580,Old Pennywell Rd before Prospero Pl,47.556174,-52.749125,feeder stop,F16,574
+3585,Portugal Cove Rd opp Chancellor Pk,47.593881,-52.725633,feeder stop,F12,173
 3595,Portugal Cove Rd before Maypark Pl,47.591403,-52.723017,walk to nearby stop,,484
-3630,Ennis Ave after Slattery Rd,47.590111,-52.704453,feeder stop,F13,426
-3635,Ennis Ave after Warren St,47.587806,-52.704181,feeder stop,F13,440
+3630,Ennis Ave after Slattery Rd,47.590111,-52.704453,feeder stop,F11,426
+3635,Ennis Ave after Warren St,47.587806,-52.704181,feeder stop,F11,440
 3640,Ennis Ave opp Parsons Rd,47.585481,-52.704656,walk to nearby stop,,357
 3645,Bay Bulls Rd before Old Petty Harbour Rd,47.52415,-52.74802,feeder stop,F1,1083
 1420,Legion Rd before Churchill Ave,47.583898,-52.692847,feeder stop,F5,1153
@@ -75,36 +75,36 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1450,Charter Ave before Veterans Rd,47.588773,-52.686632,feeder stop,F5,1745
 1460,Newfoundland Dr before Watson St,47.592617,-52.687272,feeder stop,F5,1671
 1465,Newfoundland Dr before Montague St,47.594061,-52.688094,feeder stop,F5,1618
-1470,Montague St before Drake Cres,47.596432,-52.688356,feeder stop,"F5, F13",1660
-1480,Montague St after Watson Cres,47.599339,-52.688275,feeder stop,"F5, F13",1760
-1495,Newfoundland Dr after Middleton St,47.597036,-52.694733,feeder stop,"F5, F13",1245
-1500,Newfoundland Dr at Logy Bay Rd,47.598196,-52.6977,feeder stop,"F5, F13",1060
-1505,Logy Bay Rd at Logy Bay Manor,47.597761,-52.698567,feeder stop,"F5, F13",1005
-1510,Logy Bay Rd opp Fairwood St,47.596361,-52.699792,feeder stop,"F5, F13",878
-1515,MacDonald Dr after Guzzwell Dr,47.593986,-52.702147,feeder stop,"F5, F13",578
-1520,MacDonald Dr before Dufferin Pl,47.593583,-52.705878,feeder stop,F13,327
+1470,Montague St before Drake Cres,47.596432,-52.688356,feeder stop,"F5, F11",1660
+1480,Montague St after Watson Cres,47.599339,-52.688275,feeder stop,"F5, F11",1760
+1495,Newfoundland Dr after Middleton St,47.597036,-52.694733,feeder stop,"F5, F11",1245
+1500,Newfoundland Dr at Logy Bay Rd,47.598196,-52.6977,feeder stop,"F5, F11",1060
+1505,Logy Bay Rd at Logy Bay Manor,47.597761,-52.698567,feeder stop,"F5, F11",1005
+1510,Logy Bay Rd opp Fairwood St,47.596361,-52.699792,feeder stop,"F5, F11",878
+1515,MacDonald Dr after Guzzwell Dr,47.593986,-52.702147,feeder stop,"F5, F11",578
+1520,MacDonald Dr before Dufferin Pl,47.593583,-52.705878,feeder stop,F11,327
 1530,Torbay Rd at Glenbrook Lodge,47.589064,-52.709747,trunk stop,T1,0
-1535,Elizabeth Ave before New Cove Rd,47.585293,-52.709471,trunk stop,"T1, F13",0
+1535,Elizabeth Ave before New Cove Rd,47.585293,-52.709471,trunk stop,"T1, F11",0
 1540,Elizabeth Ave at Regatta Plaza,47.583144,-52.711032,walk to nearby stop,,260
 1542,Elizabeth Ave after Portugal Cove Rd,47.581564,-52.713972,feeder stop,F6,413
 1545,Elizabeth Ave before Downing St,47.580317,-52.716312,feeder stop,F6,587
 1550,Elizabeth Ave before Long Pond Rd,47.578175,-52.720403,feeder stop,F6,792
 1555,Elizabeth Ave opp Churchill Square,47.575142,-52.723974,feeder stop,F6,920
-1560,Elizabeth Ave after Allandale Rd,47.573044,-52.726598,feeder stop,"F6, F23",672
+1560,Elizabeth Ave after Allandale Rd,47.573044,-52.726598,feeder stop,"F6, F20",672
 1565,Elizabeth Ave after Russell Rd,47.571792,-52.728838,feeder stop,F6,543
 1575,Elizabeth Ave opp Whiteway St,47.56707,-52.735998,feeder stop,F6,449
 1585,Freshwater Rd before Oxen Pond Rd,47.563114,-52.741108,trunk stop,"T1, F6",0
 1605,OLeary Ave before Peet St,47.560369,-52.760339,walk to nearby stop,,217
 1610,Peet Street,47.558415,-52.760229,walk to nearby stop,,269
 1611,Kenmount Rd after Peet St,47.55756,-52.75858,walk to nearby stop,,281
-1613,Kenmount Rd before Kelsey Dr,47.551041,-52.777308,feeder stop,"F7, F21",1781
+1613,Kenmount Rd before Kelsey Dr,47.551041,-52.777308,feeder stop,"F7, F18",1781
 1614,Kenmount Rd after Pippy Pl,47.555139,-52.76738,walk to nearby stop,,916
 1615,Kenmount Rd after Polina Rd,47.559352,-52.750975,walk to nearby stop,,380
 1620,Freshwater Rd before Crosbie Rd,47.561019,-52.746348,trunk stop,T1,0
 1625,Freshwater Rd after Stamps Ln,47.5629,-52.741389,trunk stop,"T1, F6",0
 1635,Elizabeth Ave before Whiteway St,47.56695,-52.735835,feeder stop,F6,449
 1640,Elizabeth Ave before Baltimore St,47.569269,-52.733298,walk to nearby stop,,490
-1655,Elizabeth Ave before Bonaventure Ave,47.572658,-52.726916,feeder stop,"F6, F23",672
+1655,Elizabeth Ave before Bonaventure Ave,47.572658,-52.726916,feeder stop,"F6, F20",672
 1660,Elizabeth Ave at Churchill Square,47.575331,-52.723293,feeder stop,F6,920
 1665,Elizabeth Ave after Long Pong Rd,47.577922,-52.720578,feeder stop,F6,792
 1670,Elizabeth Ave after Carpasian Rd,47.5799,-52.716871,walk to nearby stop,,639
@@ -114,14 +114,14 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1690,Torbay Rd at Sobeys,47.58724,-52.708449,walk to nearby stop,,225
 1695,Torbay Rd before Slattery Rd,47.588314,-52.709481,walk to nearby stop,,86
 1705,MacDonald Dr before Ennis Ave,47.593028,-52.708156,walk to nearby stop,,155
-1710,MacDonald Dr before Logy Bay Rd,47.593817,-52.702612,feeder stop,"F5, F13",578
-1715,Logy Bay Rd before Newfoundland Dr,47.59732,-52.698748,feeder stop,"F5, F13",1005
-1720,Newfoundland Dr opp Rutledge Cres,47.598032,-52.697778,feeder stop,"F5, F13",1060
+1710,MacDonald Dr before Logy Bay Rd,47.593817,-52.702612,feeder stop,"F5, F11",578
+1715,Logy Bay Rd before Newfoundland Dr,47.59732,-52.698748,feeder stop,"F5, F11",1005
+1720,Newfoundland Dr opp Rutledge Cres,47.598032,-52.697778,feeder stop,"F5, F11",1060
 1725,Newfoundland Dr opp Pickmore Pl,47.597249,-52.695619,walk to nearby stop,,1197
 1730,Middleton St at Virginia Park School,47.598008,-52.693314,walk to nearby stop,,1389
-1735,Montague St after Pole Cres,47.599721,-52.690446,feeder stop,"F5, F13",1597
-1740,Montague St opp Watson Cres,47.599036,-52.688173,feeder stop,"F5, F13",1760
-1750,Montague St before Newfoundland Dr,47.5966,-52.688561,feeder stop,"F5, F13",1660
+1735,Montague St after Pole Cres,47.599721,-52.690446,feeder stop,"F5, F11",1597
+1740,Montague St opp Watson Cres,47.599036,-52.688173,feeder stop,"F5, F11",1760
+1750,Montague St before Newfoundland Dr,47.5966,-52.688561,feeder stop,"F5, F11",1660
 1755,Newfoundland Dr at Pleasant View Towers,47.594114,-52.688306,feeder stop,F5,1618
 1760,Newfoundland Dr before East White Hills Rd,47.59237,-52.687311,feeder stop,F5,1671
 1765,Charter Ave after Veterans Rd,47.588854,-52.686329,feeder stop,F5,1745
@@ -134,27 +134,27 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1805,The Boulevard after Pleasantville Ave,47.580614,-52.697972,walk to nearby stop,,648
 1810,The Boulevard before Kennas Hill,47.57855,-52.701597,walk to nearby stop,,305
 1820,Kings Bridge Rd before Military Rd,47.572134,-52.70207,"removed (trunk passes, stop consolidated)",,95
-1825,Military Rd at St Thomas Church,47.571395,-52.702265,trunk stop,"T1, T2, F22, F29",0
+1825,Military Rd at St Thomas Church,47.571395,-52.702265,trunk stop,"T1, T2, F19, F26",0
 1830,Military Rd before Bannerman St,47.571265,-52.705096,"removed (trunk passes, stop consolidated)",,189
 2355,Waterford Bridge Rd opp Waterford Ave,47.535306,-52.736192,walk to nearby stop,,386
 2410,Waterford Bridge Rd before Chuckley Pear Pl,47.536467,-52.735248,walk to nearby stop,,389
 2415,Waterford Bridge Rd opp Waterford Ln,47.535079,-52.736656,walk to nearby stop,,386
-2420,Waterford Bridge Rd at Beaconsfield School,47.532951,-52.738803,feeder stop,"F12, F25",524
-2425,Waterford Bridge Rd at Littledale,47.531499,-52.740206,feeder stop,"F12, F25",558
-2430,Waterford Bridge Rd after Bay Bulls Rd,47.52955,-52.743942,feeder stop,"F12, F25",645
-2435,Waterford Bridge Rd opp Bowring Pk Duck Pond,47.529281,-52.746163,feeder stop,"F12, F25",582
-2445,Waterford Bridge Rd after Cowan Ave,47.527031,-52.752961,feeder stop,"F12, F25",781
-2450,Waterford Bridge Rd opp Park Rd,47.525614,-52.757069,feeder stop,"F12, F25",1035
-2455,Waterford Bridge Rd before Brookfield Rd,47.524839,-52.7598,feeder stop,"F12, F25",1232
-2460,Brookfield Rd at Mifflin Ct,47.523937,-52.761729,feeder stop,F25,1399
-2470,Grieve St,47.52054,-52.76557,feeder stop,F25,1875
-2475,Hawker Cres,47.518419,-52.763832,feeder stop,F25,1995
-2480,Earhart St before Perlin St,47.51798,-52.760787,feeder stop,F25,1931
-2485,Earhart St before Cormack St,47.519139,-52.760406,feeder stop,F25,1802
-2490,Perlin St before Waterford Hgts S,47.520464,-52.760358,feeder stop,F25,1669
-2495,Perlin St before Brookfield Rd,47.522208,-52.762456,feeder stop,F25,1586
-2500,Brookfield Rd before Waterford Bridge Rd,47.523839,-52.761539,feeder stop,F25,1399
-2505,Brookfield Rd opp Knowling St,47.525819,-52.76145,feeder stop,F12,1228
+2420,Waterford Bridge Rd at Beaconsfield School,47.532951,-52.738803,feeder stop,"F10, F22",524
+2425,Waterford Bridge Rd at Littledale,47.531499,-52.740206,feeder stop,"F10, F22",558
+2430,Waterford Bridge Rd after Bay Bulls Rd,47.52955,-52.743942,feeder stop,"F10, F22",645
+2435,Waterford Bridge Rd opp Bowring Pk Duck Pond,47.529281,-52.746163,feeder stop,"F10, F22",582
+2445,Waterford Bridge Rd after Cowan Ave,47.527031,-52.752961,feeder stop,"F10, F22",781
+2450,Waterford Bridge Rd opp Park Rd,47.525614,-52.757069,feeder stop,"F10, F22",1035
+2455,Waterford Bridge Rd before Brookfield Rd,47.524839,-52.7598,feeder stop,"F10, F22",1232
+2460,Brookfield Rd at Mifflin Ct,47.523937,-52.761729,feeder stop,F22,1399
+2470,Grieve St,47.52054,-52.76557,feeder stop,F22,1875
+2475,Hawker Cres,47.518419,-52.763832,feeder stop,F22,1995
+2480,Earhart St before Perlin St,47.51798,-52.760787,feeder stop,F22,1931
+2485,Earhart St before Cormack St,47.519139,-52.760406,feeder stop,F22,1802
+2490,Perlin St before Waterford Hgts S,47.520464,-52.760358,feeder stop,F22,1669
+2495,Perlin St before Brookfield Rd,47.522208,-52.762456,feeder stop,F22,1586
+2500,Brookfield Rd before Waterford Bridge Rd,47.523839,-52.761539,feeder stop,F22,1399
+2505,Brookfield Rd opp Knowling St,47.525819,-52.76145,feeder stop,F10,1228
 2510,Steer St,47.525278,-52.764243,walk to nearby stop,,1421
 2515,Doyle St,47.524181,-52.76613,walk to nearby stop,,1608
 2525,Burgeo St before Ferryland St W,47.52568,-52.77001,walk to nearby stop,,1744
@@ -163,28 +163,28 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2540,Canada Dr after Renews St,47.530642,-52.764703,walk to nearby stop,,1149
 2545,Canada Dr opp Cowan Hgts Elem,47.531698,-52.763029,walk to nearby stop,,996
 2550,Cowan Ave before Topsail Rd,47.53104,-52.75851,walk to nearby stop,,700
-2555,Topsail Rd before Holbrook Ave,47.53097,-52.7558,feeder stop,"F8, F10, F12",529
-2560,Thorburn Rd opp Picea Ln,47.563575,-52.759125,trunk stop,"T1, F16",0
+2555,Topsail Rd before Holbrook Ave,47.53097,-52.7558,feeder stop,"F2, F3, F10",529
+2560,Thorburn Rd opp Picea Ln,47.563575,-52.759125,trunk stop,"T1, F13",0
 2565,Thorburn Rd before Mount Scio Rd,47.564289,-52.76205,walk to nearby stop,,227
 2570,Thorburn Rd after Bambrick St,47.564647,-52.766325,walk to nearby stop,,544
-2575,Goldstone St opp Sorrel Dr,47.56425,-52.771422,feeder stop,F16,923
+2575,Goldstone St opp Sorrel Dr,47.56425,-52.771422,feeder stop,F13,923
 2580,Kelsey Dr after Messenger Dr,47.558737,-52.781581,walk to nearby stop,,1757
 2615,Kelsey Dr at Sobeys,47.552675,-52.780892,walk to nearby stop,,1934
-2620,Kenmount Rd at Sandman Hotel,47.552298,-52.773889,feeder stop,"F7, F21",1497
-2622,Kenmount Rd at Fairfield Inn,47.553947,-52.770225,feeder stop,"F7, F21",1167
-2625,Pippy Pl at Canada Post Office,47.555781,-52.767033,feeder stop,F18,862
-2626,Kenmount Rd at Academy Canada,47.555727,-52.764753,feeder stop,"F7, F18, F21",721
+2620,Kenmount Rd at Sandman Hotel,47.552298,-52.773889,feeder stop,"F7, F18",1497
+2622,Kenmount Rd at Fairfield Inn,47.553947,-52.770225,feeder stop,"F7, F18",1167
+2625,Pippy Pl at Canada Post Office,47.555781,-52.767033,feeder stop,F15,862
+2626,Kenmount Rd at Academy Canada,47.555727,-52.764753,feeder stop,"F7, F15, F18",721
 2630,Pippy Pl after OLeary Ave,47.558603,-52.769606,walk to nearby stop,,921
-2640,Pippy Pl before Duffy Pl,47.562517,-52.772167,feeder stop,F18,979
-2645,Goldstone St at Sorrel Dr,47.564002,-52.771664,feeder stop,F16,923
-2647,Seaborn St after Faulkner St,47.56623,-52.76655,feeder stop,F16,624
-2648,Bambrick St,47.56562,-52.76538,feeder stop,F16,515
+2640,Pippy Pl before Duffy Pl,47.562517,-52.772167,feeder stop,F15,979
+2645,Goldstone St at Sorrel Dr,47.564002,-52.771664,feeder stop,F13,923
+2647,Seaborn St after Faulkner St,47.56623,-52.76655,feeder stop,F13,624
+2648,Bambrick St,47.56562,-52.76538,feeder stop,F13,515
 2650,Thorburn Rd after Wigmore Ct,47.564128,-52.762188,walk to nearby stop,,227
-2655,Thorburn Rd before Picea Ln,47.563458,-52.759413,trunk stop,"T1, F16",0
-2660,Thorburn Rd at Avalon Mall,47.562114,-52.75395,trunk stop,"T1, F23",0
-2665,Clinch Cres opp Warners Rd,47.56918,-52.74518,feeder stop,"F17, F23",732
-2670,Clinch Cres at Janeway,47.572631,-52.743789,feeder stop,F17,614
-2675,Clinch Cres before Warners Rd,47.569019,-52.744689,feeder stop,"F17, F23",732
+2655,Thorburn Rd before Picea Ln,47.563458,-52.759413,trunk stop,"T1, F13",0
+2660,Thorburn Rd at Avalon Mall,47.562114,-52.75395,trunk stop,"T1, F20",0
+2665,Clinch Cres opp Warners Rd,47.56918,-52.74518,feeder stop,"F14, F20",732
+2670,Clinch Cres at Janeway,47.572631,-52.743789,feeder stop,F14,614
+2675,Clinch Cres before Warners Rd,47.569019,-52.744689,feeder stop,"F14, F20",732
 2680,Westerland Rd opp Irwins Rd,47.570838,-52.737063,walk to nearby stop,,300
 2685,Anderson Ave before Howlett Ave,47.565285,-52.736247,walk to nearby stop,,298
 2695,Freshwater Rd at Keane Pl,47.56312,-52.728377,walk to nearby stop,,62
@@ -205,7 +205,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2805,Crosbie Rd before Crosbie Pl,47.560903,-52.744555,walk to nearby stop,,145
 2810,Crosbie Rd opp Swilers Club,47.558866,-52.742842,walk to nearby stop,,367
 2820,Mundy Pond Rd before Ropewalk Ln,47.55495,-52.73414,walk to nearby stop,,218
-1010,Topsail Rd at Hazelwood Elem,47.53504,-52.74517,trunk stop,"T2, F20",0
+1010,Topsail Rd at Hazelwood Elem,47.53504,-52.74517,trunk stop,"T2, F17",0
 1015,Topsail Rd after Hazelwood Cres,47.535846,-52.743286,"removed (trunk passes, stop consolidated)",,181
 1020,Topsail Rd before Road De Luxe,47.537489,-52.740131,trunk stop,T2,0
 1025,Cornwall Ave after Old Topsail Rd,47.539536,-52.737917,trunk stop,T2,0
@@ -229,12 +229,12 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1135,University Ave after Curtis Pl,47.565583,-52.742525,walk to nearby stop,,302
 1140,University Ave before CBC,47.569167,-52.740242,walk to nearby stop,,579
 1145,Clinch Cres near Arctic Ave,47.571841,-52.738179,"removed (trunk passes, stop consolidated)",,265
-1165,Portugal Cove Rd after Prince Philip Dr,47.590636,-52.721217,feeder stop,F14,601
-1170,Portugal Cove Rd at Chancellor Park,47.593886,-52.725335,walk to nearby stop,,173
-1175,Higgins Line after Portugal Cove Rd,47.594747,-52.727619,trunk stop,"T1, F14",0
+1165,Portugal Cove Rd after Prince Philip Dr,47.590636,-52.721217,feeder stop,F12,601
+1170,Portugal Cove Rd at Chancellor Park,47.593886,-52.725335,feeder stop,F12,173
+1175,Higgins Line after Portugal Cove Rd,47.594747,-52.727619,trunk stop,"T1, F12",0
 1180,Higgins Line after Pinsent Pl,47.593233,-52.728508,"removed (trunk passes, stop consolidated)",,173
 1185,Ridge Rd opp YMCA,47.589975,-52.730275,trunk stop,T1,0
-1190,Ridge Rd before Gloucester St,47.588372,-52.734146,trunk stop,"T1, F15, F31",0
+1190,Ridge Rd before Gloucester St,47.588372,-52.734146,trunk stop,"T1, F12, F28",0
 1200,Ridge Rd opp civic 30,47.589439,-52.731464,"removed (trunk passes, stop consolidated)",,107
 1205,Higgins Line near Dublin Rd,47.587625,-52.728536,walk to nearby stop,,282
 1210,Allandale Rd opp Confed Bldg,47.58345,-52.728694,walk to nearby stop,,70
@@ -244,7 +244,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1230,Oxen Pond Rd before Freshwater Rd,47.563344,-52.742778,walk to nearby stop,,125
 1232,Stamps Ln before Wishingwell Rd,47.56174,-52.7415,walk to nearby stop,,146
 1235,Wishingwell Rd before Crosbie Rd,47.560419,-52.743003,walk to nearby stop,,260
-1240,Allandale Rd Arts and Culture Centre,47.57523,-52.72738,feeder stop,F23,673
+1240,Allandale Rd Arts and Culture Centre,47.57523,-52.72738,feeder stop,F20,673
 1250,Empire Ave before Cordage Pl,47.555967,-52.741751,walk to nearby stop,,357
 1255,Empire Ave before Ropewalk Ln,47.557072,-52.739383,walk to nearby stop,,153
 1260,Empire Ave opp Kellys Brook Apts,47.558025,-52.737648,trunk stop,"T1, T2, T3",0
@@ -259,7 +259,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1310,Topsail Rd opp Old Topsail Rd,47.538914,-52.738742,walk to nearby stop,,93
 1315,Topsail Rd before Colville Pl,47.537661,-52.740186,trunk stop,T2,0
 1320,Topsail Rd before Forbes St,47.536242,-52.742783,"removed (trunk passes, stop consolidated)",,181
-1325,Topsail Rd before Columbus Dr,47.535364,-52.745028,trunk stop,"T2, F20",0
+1325,Topsail Rd before Columbus Dr,47.535364,-52.745028,trunk stop,"T2, F17",0
 1330,Langley Rd,47.584507,-52.695711,feeder stop,F5,1005
 1335,Hamilton Ave after Symonds Ave,47.549081,-52.728747,walk to nearby stop,,220
 1340,Lemarchant Rd after Hamilton Ave,47.550661,-52.726303,walk to nearby stop,,212
@@ -268,7 +268,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1355,Lemarchant Rd opp St Clares Hospital,47.55738,-52.72048,feeder stop,F4,593
 1360,Lemarchant Rd after Casey St,47.559251,-52.718878,feeder stop,F4,519
 1365,Lemarchant Rd after Barters Hill,47.561831,-52.716706,walk to nearby stop,,369
-1375,Baird Place at Oxen Pond Rd,47.56539,-52.748826,feeder stop,"F17, F23",520
+1375,Baird Place at Oxen Pond Rd,47.56539,-52.748826,feeder stop,"F14, F20",520
 1380,Military Rd opp Gathering Place,47.567793,-52.708903,"removed (trunk passes, stop consolidated)",,296
 1385,Military Rd after Kings Rd,47.56948,-52.70749,walk to nearby stop,,79
 1390,Military Rd before Cochrane St,47.571197,-52.704537,"removed (trunk passes, stop consolidated)",,189
@@ -303,18 +303,18 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2020,Torbay Rd opp Prim Pl,47.602143,-52.71468,walk to nearby stop,,355
 2030,Torbay Rd before Stavanger Dr,47.613963,-52.722662,walk to nearby stop,,1790
 2035,Stavanger Dr near McDonalds,47.615162,-52.719545,walk to nearby stop,,1821
-2040,Aberdeen Ave at Staples,47.617009,-52.715094,feeder stop,F28,1945
-2045,Aberdeen Ave at Eastern Health,47.615225,-52.713219,feeder stop,F28,1734
-2050,Stavanger Dr opp Hyde Park,47.614389,-52.708731,feeder stop,F28,1652
-2055,Carrick Dr before Paddy Dobbin Dr,47.612432,-52.70663,feeder stop,F28,1469
-2060,Carrick Dr opp Baker St,47.610208,-52.706169,feeder stop,F28,1243
-2065,Carrick Dr at Highland Dr,47.607107,-52.708389,feeder stop,F28,863
+2040,Aberdeen Ave at Staples,47.617009,-52.715094,feeder stop,F25,1945
+2045,Aberdeen Ave at Eastern Health,47.615225,-52.713219,feeder stop,F25,1734
+2050,Stavanger Dr opp Hyde Park,47.614389,-52.708731,feeder stop,F25,1652
+2055,Carrick Dr before Paddy Dobbin Dr,47.612432,-52.70663,feeder stop,F25,1469
+2060,Carrick Dr opp Baker St,47.610208,-52.706169,feeder stop,F25,1243
+2065,Carrick Dr at Highland Dr,47.607107,-52.708389,feeder stop,F25,863
 2070,Carrick Dr after Paul Reynolds Centre,47.602228,-52.70807,walk to nearby stop,,393
 2072,Newfoundland Dr after Carrick Dr,47.600928,-52.708095,walk to nearby stop,,304
-2095,Torbay Rd at Harbour View Ave,47.607067,-52.720589,feeder stop,"F11, F24",1077
-2105,Dunlea St,47.605103,-52.713953,feeder stop,F11,628
-2110,Birchwynd St,47.604281,-52.711775,feeder stop,F11,513
-2115,Gleneyre St near Paul Reynolds Centre,47.603769,-52.711053,feeder stop,F11,458
+2095,Torbay Rd at Harbour View Ave,47.607067,-52.720589,feeder stop,"F9, F21",1077
+2105,Dunlea St,47.605103,-52.713953,feeder stop,F9,628
+2110,Birchwynd St,47.604281,-52.711775,feeder stop,F9,513
+2115,Gleneyre St near Paul Reynolds Centre,47.603769,-52.711053,feeder stop,F9,458
 2120,Gleneyre St before Torbay Rd,47.601928,-52.712408,walk to nearby stop,,257
 2125,Torbay Rd near Gleneyre St,47.600669,-52.713019,walk to nearby stop,,149
 2130,Torbay Rd at Newfoundland Dr,47.59874,-52.711367,walk to nearby stop,,106
@@ -337,29 +337,29 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2240,Craigmillar Ave at Fraser Pl,47.542699,-52.733662,walk to nearby stop,,88
 2245,Craigmillar Ave before Cornwall Ave,47.54239,-52.73446,trunk stop,"T2, T3",0
 2295,Brookfield Rd after Knowling St,47.525269,-52.761478,walk to nearby stop,,1274
-2320,Waterford Bridge Rd near Park Rd,47.525642,-52.756453,feeder stop,"F12, F25",1035
-2325,Waterford Bridge Rd before Cowan Ave,47.526978,-52.752736,feeder stop,"F12, F25",781
+2320,Waterford Bridge Rd near Park Rd,47.525642,-52.756453,feeder stop,"F10, F22",1035
+2325,Waterford Bridge Rd before Cowan Ave,47.526978,-52.752736,feeder stop,"F10, F22",781
 2335,Waterford Bridge Rd at Bowring Park,47.528678,-52.746744,walk to nearby stop,,622
-2340,Waterford Bridge Rd opp civic 280,47.52943,-52.74329,feeder stop,"F12, F25",645
-2345,Waterford Bridge Rd opp Littledale,47.531558,-52.739883,feeder stop,"F12, F25",558
+2340,Waterford Bridge Rd opp civic 280,47.52943,-52.74329,feeder stop,"F10, F22",645
+2345,Waterford Bridge Rd opp Littledale,47.531558,-52.739883,feeder stop,"F10, F22",558
 2830,St Clare Ave after Campbell Ave,47.555275,-52.730067,walk to nearby stop,,158
 2835,St Clare Ave opp ONeil Ave,47.556228,-52.72886,walk to nearby stop,,304
 2840,St Clare Ave after Mt Royal Ave,47.557073,-52.725148,walk to nearby stop,,580
 2845,St Clare Ave before Ricketts Rd,47.557314,-52.723667,walk to nearby stop,,668
 2850,St Clares Hospital,47.558168,-52.720699,walk to nearby stop,,658
 2855,Blackhead Rd before Southside Rd,47.548526,-52.718243,walk to nearby stop,,138
-2860,Blackhead Rd before Linegar Ave,47.547764,-52.712178,feeder stop,"F26, F27",536
-2865,Linegar Ave before Chafe Ave,47.547439,-52.709622,feeder stop,F26,713
-2870,Dillon Cres civic 63,47.547117,-52.713061,feeder stop,F26,542
-2875,Dillon Cres civic 31,47.545278,-52.715361,feeder stop,F26,500
-2880,Dillon Cres at Linegar Ave,47.543828,-52.717369,feeder stop,F26,513
-2885,Linegar Ave before Hennessey Pl,47.543349,-52.716202,feeder stop,F26,615
-2890,Linegar Ave at Health Centre,47.542836,-52.712977,feeder stop,F26,821
-2900,Linegar Ave opp Community Centre,47.546426,-52.70854,feeder stop,F26,848
-2905,Druken Cres after Druggett Pl,47.548586,-52.708572,feeder stop,F27,705
-2910,Druken Cres before Jordan Pl,47.550831,-52.706397,feeder stop,F27,698
-2915,Jordan Pl,47.550819,-52.708922,feeder stop,F27,547
-2920,Blackhead Rd at Golden Vista,47.547908,-52.712622,feeder stop,"F26, F27",536
+2860,Blackhead Rd before Linegar Ave,47.547764,-52.712178,feeder stop,"F23, F24",536
+2865,Linegar Ave before Chafe Ave,47.547439,-52.709622,feeder stop,F23,713
+2870,Dillon Cres civic 63,47.547117,-52.713061,feeder stop,F23,542
+2875,Dillon Cres civic 31,47.545278,-52.715361,feeder stop,F23,500
+2880,Dillon Cres at Linegar Ave,47.543828,-52.717369,feeder stop,F23,513
+2885,Linegar Ave before Hennessey Pl,47.543349,-52.716202,feeder stop,F23,615
+2890,Linegar Ave at Health Centre,47.542836,-52.712977,feeder stop,F23,821
+2900,Linegar Ave opp Community Centre,47.546426,-52.70854,feeder stop,F23,848
+2905,Druken Cres after Druggett Pl,47.548586,-52.708572,feeder stop,F24,705
+2910,Druken Cres before Jordan Pl,47.550831,-52.706397,feeder stop,F24,698
+2915,Jordan Pl,47.550819,-52.708922,feeder stop,F24,547
+2920,Blackhead Rd at Golden Vista,47.547908,-52.712622,feeder stop,"F23, F24",536
 2925,Blackhead Rd opp Linegar Ave,47.546842,-52.716741,walk to nearby stop,,306
 2930,St Clare Ave before Ricketts Rd,47.558306,-52.720547,walk to nearby stop,,658
 2935,St Clare Ave after Golf Ave,47.557692,-52.722522,walk to nearby stop,,732
@@ -372,41 +372,41 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2975,Forbes St before Bartlett Pl,47.537101,-52.746924,walk to nearby stop,,252
 2980,Boyle St opp Lloyd Cres,47.537649,-52.746614,walk to nearby stop,,295
 2985,Boyle St before Harris Rd,47.539186,-52.744299,walk to nearby stop,,377
-2990,Boyle St before Anspach St,47.541109,-52.744818,feeder stop,F20,525
+2990,Boyle St before Anspach St,47.541109,-52.744818,feeder stop,F17,525
 2995,Anspach St after Spratt Pl,47.540706,-52.748294,walk to nearby stop,,657
-3000,Hogan St,47.540194,-52.750856,feeder stop,F20,691
+3000,Hogan St,47.540194,-52.750856,feeder stop,F17,691
 3005,Captain Whelan Dr after Spring Meadow Ct,47.541373,-52.753454,walk to nearby stop,,880
-3010,Blackmarsh Rd  before Gulliver Pl,47.544007,-52.753457,feeder stop,F20,1172
-3015,Blackmarsh Rd after Alderberry Ln,47.544166,-52.749327,feeder stop,F20,1023
-3020,Blackmarsh Rd opp Murphys Ave,47.544457,-52.74672,feeder stop,F20,880
-3025,Blackmarsh Rd opp Dominion,47.54452,-52.74414,feeder stop,F20,735
-3035,Blackmarsh Rd near Fire Station,47.545622,-52.739758,feeder stop,F20,506
+3010,Blackmarsh Rd  before Gulliver Pl,47.544007,-52.753457,feeder stop,F17,1172
+3015,Blackmarsh Rd after Alderberry Ln,47.544166,-52.749327,feeder stop,F17,1023
+3020,Blackmarsh Rd opp Murphys Ave,47.544457,-52.74672,feeder stop,F17,880
+3025,Blackmarsh Rd opp Dominion,47.54452,-52.74414,feeder stop,F17,735
+3035,Blackmarsh Rd near Fire Station,47.545622,-52.739758,feeder stop,F17,506
 3040,Blackler Ave after Blackmarsh Rd,47.547419,-52.739158,walk to nearby stop,,512
 3045,Blackler Ave before Mundy Pond Rd,47.549158,-52.743944,walk to nearby stop,,920
-3050,Mundy Pond Rd before Murphys Ln,47.550259,-52.743711,feeder stop,"F9, F20",974
-3055,Mundy Pond Rd near St Teresas Elem,47.553134,-52.739042,feeder stop,F20,540
+3050,Mundy Pond Rd before Murphys Ln,47.550259,-52.743711,feeder stop,"F8, F17",974
+3055,Mundy Pond Rd near St Teresas Elem,47.553134,-52.739042,feeder stop,F17,540
 3060,Mundy Pond Rd before Ropewalk Ln,47.554029,-52.735041,walk to nearby stop,,291
 3065,Ropewalk Lane,47.556429,-52.736864,walk to nearby stop,,214
 3070,Empire Ave after Grenfell Ave,47.559719,-52.734158,trunk stop,"T1, T2",0
 3075,Empire Ave before ODea Pl,47.561292,-52.73159,"removed (trunk passes, stop consolidated)",,246
 3085,Empire Ave after ODea Pl,47.56143,-52.731706,"removed (trunk passes, stop consolidated)",,246
 3100,Mundy Pond Rd after Ropewalk Ln,47.554106,-52.73542,walk to nearby stop,,291
-3105,Mundy Pond Rd near St Teresas Elem,47.553311,-52.739019,feeder stop,F20,540
-3110,Mundy Pond Rd before Murphys Ln,47.551266,-52.742784,feeder stop,F20,835
-3115,Mundy Pond Rd before Blackler Ave,47.550208,-52.744022,feeder stop,"F9, F20",974
-3120,Blackler Ave after Anthony Ave,47.548502,-52.742402,feeder stop,F20,784
-3125,Blackler Ave near City Depot,47.547605,-52.740132,feeder stop,F20,587
-3130,Blackmarsh Rd after Blackler Ave,47.545793,-52.739745,feeder stop,F20,506
-3140,Blackmarsh Rd at Dominion,47.544639,-52.744333,feeder stop,F20,735
-3145,Blackmarsh Rd after Murphys Ave,47.544528,-52.747397,feeder stop,F20,880
-3150,Blackmarsh Rd after Alderberry Ln,47.544215,-52.750022,feeder stop,F20,1023
-3155,Blackmarsh Rd before Jensen Camp Rd,47.544069,-52.753981,feeder stop,F20,1172
-3160,Blackmarsh Rd after Welland St,47.542398,-52.757518,feeder stop,F20,1107
-3165,Captain Whelan Dr after Hamlyn Rd,47.541199,-52.756355,feeder stop,F20,948
-3170,Hogan St,47.539945,-52.750788,feeder stop,F20,691
-3175,Anspach St after Hogan St,47.539947,-52.74948,feeder stop,F20,622
-3180,Anspach St after Hogan St,47.541276,-52.746042,feeder stop,F20,604
-3185,Boyle St before Eastaff St,47.540992,-52.744976,feeder stop,F20,525
+3105,Mundy Pond Rd near St Teresas Elem,47.553311,-52.739019,feeder stop,F17,540
+3110,Mundy Pond Rd before Murphys Ln,47.551266,-52.742784,feeder stop,F17,835
+3115,Mundy Pond Rd before Blackler Ave,47.550208,-52.744022,feeder stop,"F8, F17",974
+3120,Blackler Ave after Anthony Ave,47.548502,-52.742402,feeder stop,F17,784
+3125,Blackler Ave near City Depot,47.547605,-52.740132,feeder stop,F17,587
+3130,Blackmarsh Rd after Blackler Ave,47.545793,-52.739745,feeder stop,F17,506
+3140,Blackmarsh Rd at Dominion,47.544639,-52.744333,feeder stop,F17,735
+3145,Blackmarsh Rd after Murphys Ave,47.544528,-52.747397,feeder stop,F17,880
+3150,Blackmarsh Rd after Alderberry Ln,47.544215,-52.750022,feeder stop,F17,1023
+3155,Blackmarsh Rd before Jensen Camp Rd,47.544069,-52.753981,feeder stop,F17,1172
+3160,Blackmarsh Rd after Welland St,47.542398,-52.757518,feeder stop,F17,1107
+3165,Captain Whelan Dr after Hamlyn Rd,47.541199,-52.756355,feeder stop,F17,948
+3170,Hogan St,47.539945,-52.750788,feeder stop,F17,691
+3175,Anspach St after Hogan St,47.539947,-52.74948,feeder stop,F17,622
+3180,Anspach St after Hogan St,47.541276,-52.746042,feeder stop,F17,604
+3185,Boyle St before Eastaff St,47.540992,-52.744976,feeder stop,F17,525
 3190,Boyle St before Lloyd Cres,47.539495,-52.744582,walk to nearby stop,,377
 3195,Boyle St civic 17,47.537989,-52.745283,walk to nearby stop,,310
 3200,Bartlett Pl,47.537403,-52.747714,walk to nearby stop,,314
@@ -415,20 +415,20 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 3215,Higgins Line after Dublin Rd,47.588961,-52.728266,"removed (trunk passes, stop consolidated)",,147
 3650,Bay Bulls Rd civic 42,47.520689,-52.751097,feeder stop,F1,1458
 6083,Robin Hood Bay Rd near Logy Bay Rd,47.609981,-52.688031,walk to nearby stop,,2112
-6085,East White Hills Rd opp Eastland Dr,47.607392,-52.67875,feeder stop,F13,2615
-6086,East White Hills Rd civic 251,47.602713,-52.682128,feeder stop,F13,2242
-6087,Harding Rd at Academy Canada,47.600439,-52.691034,feeder stop,F13,1551
-6089,Portugal Cove Rd before MacDonald Dr,47.589096,-52.718232,feeder stop,F14,654
+6085,East White Hills Rd opp Eastland Dr,47.607392,-52.67875,feeder stop,F11,2615
+6086,East White Hills Rd civic 251,47.602713,-52.682128,feeder stop,F11,2242
+6087,Harding Rd at Academy Canada,47.600439,-52.691034,feeder stop,F11,1551
+6089,Portugal Cove Rd before MacDonald Dr,47.589096,-52.718232,feeder stop,F12,654
 6090,Sunvalley Dr at Milton Rd,47.536134,-52.862387,feeder stop,F7,8308
 6091,Carlisle Dr at Canterbury Dr,47.534214,-52.838961,feeder stop,F7,6682
 6093,Brougham Dr after Canterbury Dr,47.537034,-52.826832,feeder stop,F7,5778
 6094,Carlisle Dr before Topsail Rd,47.534186,-52.839278,feeder stop,F7,6682
 6095,Sunvalley Dr at Milton Rd,47.535859,-52.862288,feeder stop,F7,8308
-6096,Ridge Rd after Gloucester St,47.588227,-52.733988,trunk stop,"T1, F15, F31",0
+6096,Ridge Rd after Gloucester St,47.588227,-52.733988,trunk stop,"T1, F12, F28",0
 6097,Ennis Ave at Parsons Rd,47.585365,-52.704769,walk to nearby stop,,357
 6098,Ennis Ave opp Parsons Rd,47.587284,-52.70396,walk to nearby stop,,469
-6099,Ennis Ave after Hutton Rd,47.589928,-52.704048,feeder stop,F13,426
-6100,Robin Hood Bay Rd before East White Hills Rd,47.60966,-52.683303,feeder stop,F13,2401
+6099,Ennis Ave after Hutton Rd,47.589928,-52.704048,feeder stop,F11,426
+6100,Robin Hood Bay Rd before East White Hills Rd,47.60966,-52.683303,feeder stop,F11,2401
 6101,Tipperary St,47.524588,-52.86833,feeder stop,F7,8944
 6102,Tiverton St at Kinkora St,47.525891,-52.868972,feeder stop,F7,8966
 6103,Burnaby St after Croydon St,47.526678,-52.870028,feeder stop,F7,9013
@@ -450,12 +450,12 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 6119,Brougham Dr opp Superior St,47.540137,-52.82934,feeder stop,F7,5825
 6120,Brougham Dr at Ellesmere Ave,47.538336,-52.827798,feeder stop,F7,5799
 6121,Brougham Dr civic 98,47.536978,-52.827049,feeder stop,F7,5778
-6122,McNamara Dr after Dianne Whalen Dr,47.523162,-52.868491,feeder stop,F21,8964
-6123,McNamara Dr at Maverick Pl,47.518517,-52.871951,feeder stop,F21,9304
-6124,McNamara Dr before Kenmount Rd,47.515822,-52.871479,feeder stop,F21,9320
-6125,Kenmount Rd after McNamara Dr,47.515356,-52.867767,feeder stop,F21,9071
-6126,Kenmount Rd at The Paint Shop,47.517805,-52.863132,feeder stop,F21,8689
-6127,Kenmount Rd at Paradise Bowl,47.520051,-52.858196,feeder stop,F21,8277
+6122,McNamara Dr after Dianne Whalen Dr,47.523162,-52.868491,feeder stop,F18,8964
+6123,McNamara Dr at Maverick Pl,47.518517,-52.871951,feeder stop,F18,9304
+6124,McNamara Dr before Kenmount Rd,47.515822,-52.871479,feeder stop,F18,9320
+6125,Kenmount Rd after McNamara Dr,47.515356,-52.867767,feeder stop,F18,9071
+6126,Kenmount Rd at The Paint Shop,47.517805,-52.863132,feeder stop,F18,8689
+6127,Kenmount Rd at Paradise Bowl,47.520051,-52.858196,feeder stop,F18,8277
 6128,Brougham Dr before Superior St,47.539918,-52.828444,walk to nearby stop,,5773
 6129,Brougham Dr at Aragon Cres,47.541173,-52.83214,feeder stop,F7,6003
 6130,Carlisle Dr after Brougham Dr,47.541242,-52.833977,walk to nearby stop,,6106
@@ -474,56 +474,56 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 6143,Topsail Rd after Irving Rd,47.530131,-52.868573,feeder stop,F7,8893
 6148,Burnaby St before Tiverton St,47.526443,-52.869342,feeder stop,F7,9013
 6149,Tipperary St,47.524431,-52.868586,feeder stop,F7,8944
-6150,Kenmount Rd before Pollard Ave,47.520115,-52.858748,feeder stop,F21,8277
-6151,Kenmount Rd civic 1250,47.517858,-52.863672,feeder stop,F21,8689
-6152,Kenmount Rd before McNamara Dr,47.515628,-52.867937,feeder stop,F21,9071
-6153,McNamara Dr after Kenmount Rd,47.51597,-52.87129,feeder stop,F21,9320
+6150,Kenmount Rd before Pollard Ave,47.520115,-52.858748,feeder stop,F18,8277
+6151,Kenmount Rd civic 1250,47.517858,-52.863672,feeder stop,F18,8689
+6152,Kenmount Rd before McNamara Dr,47.515628,-52.867937,feeder stop,F18,9071
+6153,McNamara Dr after Kenmount Rd,47.51597,-52.87129,feeder stop,F18,9320
 6154,McNamara Dr opp Maverick Pl,47.518937,-52.871239,walk to nearby stop,,9243
-6155,McNamara Dr at Carpenters Millwright College,47.522806,-52.86839,feeder stop,F21,8964
+6155,McNamara Dr at Carpenters Millwright College,47.522806,-52.86839,feeder stop,F18,8964
 6144,Kenmount Rd before Brougham Dr,47.534974,-52.825266,walk to nearby stop,,5643
-6145,Kenmount Rd at Terra Nova Motors,47.541013,-52.801066,feeder stop,"F7, F21",3891
-6156,Kenmount Rd after Ladysmith Dr,47.547503,-52.786099,feeder stop,"F7, F18, F21",2553
+6145,Kenmount Rd at Terra Nova Motors,47.541013,-52.801066,feeder stop,"F7, F18",3891
+6156,Kenmount Rd after Ladysmith Dr,47.547503,-52.786099,feeder stop,"F7, F15, F18",2553
 6157,Kenmount Rd at Great Eastern Ave,47.542362,-52.798743,walk to nearby stop,,3663
 6158,Oxen Pond Rd after Larkhall St,47.56532,-52.752654,walk to nearby stop,,383
-6160,Baird Place at Canadian Blood Services,47.566766,-52.747901,feeder stop,"F17, F23",658
-4056,Frecker Dr before Point Leamington St,47.537112,-52.761731,feeder stop,F9,949
+6160,Baird Place at Canadian Blood Services,47.566766,-52.747901,feeder stop,"F14, F20",658
+4056,Frecker Dr before Point Leamington St,47.537112,-52.761731,feeder stop,F8,949
 6162,Airport near Arrivals,47.612728,-52.747474,walk to nearby stop,,2503
-6163,World Parkway before Navigator Ave,47.612756,-52.749931,feeder stop,F24,2620
+6163,World Parkway before Navigator Ave,47.612756,-52.749931,feeder stop,F21,2620
 6164,Airport Heights Dr after Elderberry Pl,47.601488,-52.741316,walk to nearby stop,,1284
 6165,Airport Heights Dr before Canso Pl,47.60369,-52.744603,walk to nearby stop,,1628
-6166,Airport Heights Dr opp Cherokee Dr,47.605303,-52.747785,feeder stop,F24,1909
+6166,Airport Heights Dr opp Cherokee Dr,47.605303,-52.747785,feeder stop,F21,1909
 6167,Airport Heights Dr opp Penetanguishene Rd,47.605295,-52.751444,walk to nearby stop,,2150
-6168,Airport Heights Dr before Viscount St,47.605578,-52.756265,feeder stop,F24,2470
-6169,Viscount St opp Falcon Pl,47.607443,-52.754863,feeder stop,F24,2503
+6168,Airport Heights Dr before Viscount St,47.605578,-52.756265,feeder stop,F21,2470
+6169,Viscount St opp Falcon Pl,47.607443,-52.754863,feeder stop,F21,2503
 6170,Viscount St before Portugal Cove Rd,47.609416,-52.752298,walk to nearby stop,,2479
-6171,Viscount St after Malka Dr,47.607678,-52.754836,feeder stop,F24,2503
+6171,Viscount St after Malka Dr,47.607678,-52.754836,feeder stop,F21,2503
 6172,Topsail Rd before Thomas Byrne Dr,47.52832,-52.824802,feeder stop,F3,5640
-6173,Kenmount Rd opp Ladysmith Dr,47.54724,-52.785769,feeder stop,"F7, F18, F21",2553
-6174,Great Eastern Ave before Henry Larsen St,47.544906,-52.801316,feeder stop,"F16, F18",3691
-6175,Kenmount Rd before Kelsey Dr,47.549014,-52.781294,feeder stop,"F7, F18, F21",2162
+6173,Kenmount Rd opp Ladysmith Dr,47.54724,-52.785769,feeder stop,"F7, F15, F18",2553
+6174,Great Eastern Ave before Henry Larsen St,47.544906,-52.801316,feeder stop,"F13, F15",3691
+6175,Kenmount Rd before Kelsey Dr,47.549014,-52.781294,feeder stop,"F7, F15, F18",2162
 6177,Main Rd after Ruby Line,47.487516,-52.768123,feeder stop,F1,5335
 6178,Back Line after Doyles Rd,47.461435,-52.783837,feeder stop,F1,8434
-6179,Hebron Way near Canadian Tire,47.616457,-52.727257,feeder stop,F11,2202
+6179,Hebron Way near Canadian Tire,47.616457,-52.727257,feeder stop,F9,2202
 6180,Kenmount Rd at Mazda,47.553176,-52.772582,walk to nearby stop,,1361
 6186,Bonaventure Ave before Empire Ave,47.570048,-52.722431,walk to nearby stop,,601
-4135,Blackmarsh Rd opp Burdell Pl,47.538997,-52.769106,feeder stop,F9,1538
-6189,Empire Ave after Welland St,47.543621,-52.760327,feeder stop,F9,1335
-6193,Airport Heights Dr before Argus Pl,47.602403,-52.743455,feeder stop,F24,1481
-6194,Neptune Rd before Polina Rd,47.556917,-52.750378,feeder stop,F19,571
+4135,Blackmarsh Rd opp Burdell Pl,47.538997,-52.769106,feeder stop,F8,1538
+6189,Empire Ave after Welland St,47.543621,-52.760327,feeder stop,F8,1335
+6193,Airport Heights Dr before Argus Pl,47.602403,-52.743455,feeder stop,F21,1481
+6194,Neptune Rd before Polina Rd,47.556917,-52.750378,feeder stop,F16,571
 6195,Polina Rd before Kenmount Rd,47.558601,-52.751142,walk to nearby stop,,444
-6196,Newfoundland Dr before Glover Pl,47.595867,-52.691941,feeder stop,F13,1389
+6196,Newfoundland Dr before Glover Pl,47.595867,-52.691941,feeder stop,F11,1389
 6198,Blackmarsh Rd after Westview Ave,47.542904,-52.756937,walk to nearby stop,,1136
-6199,Newfoundland Dr after Montague St,47.594968,-52.689195,feeder stop,F13,1562
-6200,Old Pennywell Rd before Columbus Dr,47.555331,-52.747159,feeder stop,F19,630
-6201,Old Pennywell Rd after Columbus Dr,47.55543,-52.747133,feeder stop,F19,630
+6199,Newfoundland Dr after Montague St,47.594968,-52.689195,feeder stop,F11,1562
+6200,Old Pennywell Rd before Columbus Dr,47.555331,-52.747159,feeder stop,F16,630
+6201,Old Pennywell Rd after Columbus Dr,47.55543,-52.747133,feeder stop,F16,630
 6202,Bay Bulls Rd before Walshs Ln,47.503472,-52.760872,feeder stop,F1,3466
-6203,Hebron Way at Service Canada,47.615064,-52.72965,feeder stop,F11,2118
+6203,Hebron Way at Service Canada,47.615064,-52.72965,feeder stop,F9,2118
 6204,Charter Ave opp St Johns Pl,47.585229,-52.69336,feeder stop,F5,1192
 6205,Danny Dr near Marshalls,47.508648,-52.83138,walk to nearby stop,,6712
-6206,Danny Dr near Costco,47.506819,-52.832553,feeder stop,F32,6878
+6206,Danny Dr near Costco,47.506819,-52.832553,feeder stop,F29,6878
 6207,Topsail Rd near Waterford Valley School,47.532988,-52.750176,walk to nearby stop,,89
 6208,Castors Dr at Topsail Rd,47.526103,-52.816556,feeder stop,F3,5060
-6209,Kenmount Rd after Ryans Lane,47.550923,-52.776965,feeder stop,"F7, F21",1781
+6209,Kenmount Rd after Ryans Lane,47.550923,-52.776965,feeder stop,"F7, F18",1781
 6210,Harbour Dr opp Bishops Cove,47.560668,-52.709547,trunk stop,T2,0
 6211,Harbour Dr opp Ayres Cove,47.562677,-52.707208,"removed (trunk passes, stop consolidated)",,184
 6212,Harbour Dr opp Clifts Bairds Cove,47.563988,-52.705833,trunk stop,T2,0
@@ -531,21 +531,21 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 6214,Harbour Dr at Ayres Cove,47.562695,-52.707274,"removed (trunk passes, stop consolidated)",,184
 6215,Harbour Dr at Becks Cove,47.561347,-52.709045,walk to nearby stop,,84
 6216,Kenmount Rd after Nils Way,47.536677,-52.817534,walk to nearby stop,,5071
-6217,Kenmount Rd before Brant Dr,47.536541,-52.81661,feeder stop,"F7, F21",5001
-6218,Kenmount Rd before Karwood Dr,47.5252,-52.852757,feeder stop,F21,7765
+6217,Kenmount Rd before Brant Dr,47.536541,-52.81661,feeder stop,"F7, F18",5001
+6218,Kenmount Rd before Karwood Dr,47.5252,-52.852757,feeder stop,F18,7765
 6219,Kenmount Rd after Karwood Dr,47.525734,-52.852639,walk to nearby stop,,7749
 6220,Lester St at Hickman Pl,47.525318,-52.766753,walk to nearby stop,,1564
-6221,Kenmount Rd opp Crossroads Motel,47.527739,-52.837204,feeder stop,F21,6572
+6221,Kenmount Rd opp Crossroads Motel,47.527739,-52.837204,feeder stop,F18,6572
 6222,Kenmount Rd at Crossroads Motel,47.528545,-52.836954,walk to nearby stop,,6545
 6223,Water St before Harbour Dr,47.558588,-52.711676,"removed (trunk passes, stop consolidated)",,92
-6224,East White Hills Rd near RHB landfill,47.6053,-52.678939,feeder stop,F13,2534
+6224,East White Hills Rd near RHB landfill,47.6053,-52.678939,feeder stop,F11,2534
 6225,Merrymeeting Rd opp Sobeys,47.566602,-52.714647,walk to nearby stop,,121
 6226,Merrymeeting Rd at Sobeys,47.566675,-52.71466,walk to nearby stop,,121
-6230,Kelsey Dr before Messenger Dr,47.55814,-52.781172,feeder stop,"F16, F18",1749
-6231,Mews Center,47.548555,-52.740263,feeder stop,F20,646
+6230,Kelsey Dr before Messenger Dr,47.55814,-52.781172,feeder stop,"F13, F15",1749
+6231,Mews Center,47.548555,-52.740263,feeder stop,F17,646
 6237,Signal Hill Rd near Murphys Ln,47.572652,-52.692748,walk to nearby stop,,733
-6238,Mount Scio Rd opp Botanical Gardens,47.571162,-52.758168,feeder stop,F30,854
-6239,Mount Scio Rd opp Easter Seals,47.574509,-52.751115,feeder stop,F30,1165
+6238,Mount Scio Rd opp Botanical Gardens,47.571162,-52.758168,feeder stop,F27,854
+6239,Mount Scio Rd opp Easter Seals,47.574509,-52.751115,feeder stop,F27,1165
 6240,Ridge Rd at Marine Institute,47.586526,-52.736697,walk to nearby stop,,279
 6241,Hoyles Ave before Little St,47.565672,-52.731981,walk to nearby stop,,320
 6242,Empire Ave before Suvla St,47.566231,-52.728509,walk to nearby stop,,346
@@ -558,7 +558,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 6249,Empire Ave opp Suez St,47.56586,-52.729275,walk to nearby stop,,301
 6250,Hoyles Ave after Little St,47.565816,-52.731902,walk to nearby stop,,320
 6251,Anderson Ave before Elizabeth Ave,47.565466,-52.736245,walk to nearby stop,,298
-6252,Mount Scio Rd at Rainbow Riders,47.577603,-52.745421,feeder stop,F31,869
+6252,Mount Scio Rd at Rainbow Riders,47.577603,-52.745421,feeder stop,F28,869
 6253,Masonic Park Court E,47.535337,-52.810976,feeder stop,F3,4572
 3655,Bay Bulls Rd after Royal Oak Dr,47.518667,-52.752822,feeder stop,F1,1693
 3660,Bay Bulls Rd before Cemetery Ln,47.5178,-52.753294,feeder stop,F1,1809
@@ -611,7 +611,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 3935,Main Rd civic 129,47.479411,-52.768372,feeder stop,F1,6216
 3940,Bay Bulls Rd before Aylward Pl,47.513814,-52.755353,walk to nearby stop,,2255
 3950,Bay Bulls Rd after Cemetery Ln,47.517517,-52.753267,feeder stop,F1,1809
-3960,Bay Bulls Rd opp civic 34,47.52143,-52.75012,feeder stop,F32,1374
+3960,Bay Bulls Rd opp civic 34,47.52143,-52.75012,feeder stop,F29,1374
 3965,Bay bulls Rd before Lundrigan Rd,47.490994,-52.76743,walk to nearby stop,,4933
 3975,Bay Bulls Rd after Old Bay Bulls Rd,47.495989,-52.76577,walk to nearby stop,,4364
 3980,Bay Bulls Rd before Valleyview Rd,47.49981,-52.7627,feeder stop,F1,3869
@@ -625,43 +625,43 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4020,Fahey St civic 29,47.509184,-52.753438,feeder stop,F1,2764
 4025,Fahey St civic 57,47.507344,-52.75338,feeder stop,F1,2951
 4030,Fahey St opp Chapman Cres,47.50703,-52.75126,feeder stop,F1,2968
-4035,Hamlyn Rd at Baie Verte St,47.539094,-52.756989,feeder stop,F9,784
+4035,Hamlyn Rd at Baie Verte St,47.539094,-52.756989,feeder stop,F8,784
 4040,Old Petty Harbour Rd after Fahey St,47.50794,-52.74974,feeder stop,F1,2865
-4045,Frecker Dr opp Greenspond Dr,47.539672,-52.758311,feeder stop,F9,880
+4045,Frecker Dr opp Greenspond Dr,47.539672,-52.758311,feeder stop,F8,880
 4050,Old Petty Harbour Rd civic 147,47.5092,-52.75027,walk to nearby stop,,2734
-4055,Frecker Dr near Duntara Cres,47.539097,-52.759528,feeder stop,F9,921
+4055,Frecker Dr near Duntara Cres,47.539097,-52.759528,feeder stop,F8,921
 4060,Old Petty Harbour Rd before Meadowgreen Pl,47.511408,-52.75051,walk to nearby stop,,2488
 4070,Silverton St opp Shannon Pl,47.514211,-52.751281,walk to nearby stop,,2178
-4075,Frecker Dr opp Point Verde Pl,47.535458,-52.764169,feeder stop,F9,1071
+4075,Frecker Dr opp Point Verde Pl,47.535458,-52.764169,feeder stop,F8,1071
 4080,Kilbride Ave at Silverton St,47.512675,-52.753661,feeder stop,F1,2365
-4085,Frecker Dr before Burton St,47.531461,-52.766953,feeder stop,F9,1290
-4090,Frecker Dr before Conran St,47.529925,-52.770308,feeder stop,F9,1575
-4095,Burgeo St before Canada Dr,47.528464,-52.772492,feeder stop,F9,1781
-4100,Canada Dr before Trepassey Pl,47.527214,-52.773273,feeder stop,F9,1885
-4105,Canada Dr before Carmanville St,47.526497,-52.777442,feeder stop,F9,2205
-4110,Canada Dr opp Portland Pl,47.529217,-52.778617,feeder stop,F9,2199
-4115,Hopeall St opp Brownsdale St,47.530857,-52.776316,feeder stop,F9,2011
-4120,Frecker Dr opp Gander Cres,47.532345,-52.773979,feeder stop,F9,1798
-4125,Frecker Dr before Cherrington St,47.534967,-52.771864,feeder stop,F9,1638
-4130,Frecker Dr opp Bellevue Cres,47.535931,-52.771483,feeder stop,F9,1622
-4140,Empire Ave before Sherbourne St,47.542035,-52.763853,feeder stop,F9,1380
-4145,Empire Ave before Fitzgerald Pl,47.544467,-52.758218,feeder stop,F9,1334
-4150,Jensen Camp Rd,47.545511,-52.755753,feeder stop,F9,1375
-4155,Empire Ave at Winslow St,47.546451,-52.754232,feeder stop,F9,1428
-4160,Empire Ave before Dammerills Ln,47.548077,-52.751598,feeder stop,F9,1388
-4165,Mundy Pond Rd before Anthony Ave,47.548142,-52.746344,feeder stop,F9,1046
-4170,Murphys Lane at Erley St,47.551956,-52.745342,feeder stop,F9,880
-4175,Empire Ave at Glavine St,47.554442,-52.742831,feeder stop,F9,543
+4085,Frecker Dr before Burton St,47.531461,-52.766953,feeder stop,F8,1290
+4090,Frecker Dr before Conran St,47.529925,-52.770308,feeder stop,F8,1575
+4095,Burgeo St before Canada Dr,47.528464,-52.772492,feeder stop,F8,1781
+4100,Canada Dr before Trepassey Pl,47.527214,-52.773273,feeder stop,F8,1885
+4105,Canada Dr before Carmanville St,47.526497,-52.777442,feeder stop,F8,2205
+4110,Canada Dr opp Portland Pl,47.529217,-52.778617,feeder stop,F8,2199
+4115,Hopeall St opp Brownsdale St,47.530857,-52.776316,feeder stop,F8,2011
+4120,Frecker Dr opp Gander Cres,47.532345,-52.773979,feeder stop,F8,1798
+4125,Frecker Dr before Cherrington St,47.534967,-52.771864,feeder stop,F8,1638
+4130,Frecker Dr opp Bellevue Cres,47.535931,-52.771483,feeder stop,F8,1622
+4140,Empire Ave before Sherbourne St,47.542035,-52.763853,feeder stop,F8,1380
+4145,Empire Ave before Fitzgerald Pl,47.544467,-52.758218,feeder stop,F8,1334
+4150,Jensen Camp Rd,47.545511,-52.755753,feeder stop,F8,1375
+4155,Empire Ave at Winslow St,47.546451,-52.754232,feeder stop,F8,1428
+4160,Empire Ave before Dammerills Ln,47.548077,-52.751598,feeder stop,F8,1388
+4165,Mundy Pond Rd before Anthony Ave,47.548142,-52.746344,feeder stop,F8,1046
+4170,Murphys Lane at Erley St,47.551956,-52.745342,feeder stop,F8,880
+4175,Empire Ave at Glavine St,47.554442,-52.742831,feeder stop,F8,543
 4180,Empire Ave opp Erley St,47.553994,-52.743436,walk to nearby stop,,610
-4195,Mundy Pond Rd before Columbus Dr,47.548344,-52.746278,feeder stop,F9,1046
-4200,Coefield St,47.546631,-52.749725,feeder stop,F9,1186
-4205,Empire Ave after Dammerills Ln,47.548228,-52.751572,feeder stop,F9,1388
-4210,Empire Ave opp Winslow St,47.546294,-52.754742,feeder stop,F9,1428
-4215,Jensen Camp Rd,47.545561,-52.755894,feeder stop,F9,1375
+4195,Mundy Pond Rd before Columbus Dr,47.548344,-52.746278,feeder stop,F8,1046
+4200,Coefield St,47.546631,-52.749725,feeder stop,F8,1186
+4205,Empire Ave after Dammerills Ln,47.548228,-52.751572,feeder stop,F8,1388
+4210,Empire Ave opp Winslow St,47.546294,-52.754742,feeder stop,F8,1428
+4215,Jensen Camp Rd,47.545561,-52.755894,feeder stop,F8,1375
 4220,Empire Ave opp civic 711,47.544338,-52.759,walk to nearby stop,,1349
 4225,Empire Ave before Welland St,47.543461,-52.761389,walk to nearby stop,,1369
 4230,Blackmarsh Rd opp Harrington Dr,47.538461,-52.770067,walk to nearby stop,,1585
-4235,Frecker Dr opp Cherrington St,47.535639,-52.771556,feeder stop,F9,1622
+4235,Frecker Dr opp Cherrington St,47.535639,-52.771556,feeder stop,F8,1622
 4240,Frecker Dr at Bellevue Cres,47.533222,-52.773804,walk to nearby stop,,1779
 4250,Canada Dr opp Brownsdale St,47.528202,-52.778281,walk to nearby stop,,2203
 4255,Canada Dr at Whitbourne St,47.526466,-52.774842,walk to nearby stop,,2027
@@ -669,28 +669,28 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4265,Frecker Dr before Mansfield Cres,47.53019,-52.769338,walk to nearby stop,,1497
 4270,Frecker Dr opp Birmingham St,47.532028,-52.766281,walk to nearby stop,,1229
 4275,Frecker Dr opp Creston Pl,47.535789,-52.76353,walk to nearby stop,,1031
-4280,Frecker Dr after Point Leamington St,47.536672,-52.762072,feeder stop,F9,949
+4280,Frecker Dr after Point Leamington St,47.536672,-52.762072,feeder stop,F8,949
 4285,Frecker Dr before Greenspond Dr,47.538414,-52.760021,walk to nearby stop,,904
-4290,Frecker Dr before Hamlyn Rd,47.539678,-52.757608,feeder stop,F9,880
+4290,Frecker Dr before Hamlyn Rd,47.539678,-52.757608,feeder stop,F8,880
 4295,Hamlyn Rd after Curling Pl,47.535667,-52.754456,walk to nearby stop,,387
 4300,Hamlyn Rd after Barachois St,47.53608,-52.75505,walk to nearby stop,,449
 4305,Hamlyn Rd before Village Shopping Centre,47.534118,-52.753272,walk to nearby stop,,223
 4320,Old Placentia Rd after Commonwealth Ave,47.505125,-52.793119,feeder stop,F2,4537
-4325,Old Placentia Rd before Westbrook Landing,47.502878,-52.797531,feeder stop,F10,4948
-4330,Old Placentia Rd opp Emerald Dr,47.501464,-52.802939,feeder stop,F10,5352
-4335,Old Placentia Rd at Richard Nolan Dr,47.5027,-52.806578,feeder stop,F10,5470
+4325,Old Placentia Rd before Westbrook Landing,47.502878,-52.797531,feeder stop,F2,4948
+4330,Old Placentia Rd opp Emerald Dr,47.501464,-52.802939,feeder stop,F2,5352
+4335,Old Placentia Rd at Richard Nolan Dr,47.5027,-52.806578,feeder stop,F2,5470
 4408,Topsail Rd after Hamlyn Rd,47.53202,-52.75365,walk to nearby stop,,330
 4410,Topsail Rd after Cowan Ave,47.529922,-52.758736,feeder stop,"F2, F3",776
-4415,Topsail Rd before Brookfield Rd,47.528308,-52.761336,feeder stop,"F2, F3, F8, F10, F12",1039
+4415,Topsail Rd before Brookfield Rd,47.528308,-52.761336,feeder stop,"F2, F3, F10",1039
 4420,Topsail Rd civic 594,47.526975,-52.764833,feeder stop,"F2, F3",1339
 4425,Topsail Rd before Burgeo St,47.526108,-52.767719,feeder stop,"F2, F3",1573
-4430,Topsail Rd after Burgeo St,47.524706,-52.770822,feeder stop,"F2, F3, F8, F10",1858
-4435,Topsail Rd before Team Gushue Hwy,47.523895,-52.77416,feeder stop,"F2, F3, F8, F10",2115
-4445,Dunns Rd,47.522044,-52.777737,feeder stop,"F2, F10",2442
-4450,Park Ave opp Avery Pl,47.520667,-52.778204,feeder stop,"F2, F10",2581
-4455,Park Ave opp Worrall Cres,47.520056,-52.782978,feeder stop,"F2, F10",2921
+4430,Topsail Rd after Burgeo St,47.524706,-52.770822,feeder stop,"F2, F3",1858
+4435,Topsail Rd before Team Gushue Hwy,47.523895,-52.77416,feeder stop,"F2, F3",2115
+4445,Dunns Rd,47.522044,-52.777737,feeder stop,F2,2442
+4450,Park Ave opp Avery Pl,47.520667,-52.778204,feeder stop,F2,2581
+4455,Park Ave opp Worrall Cres,47.520056,-52.782978,feeder stop,F2,2921
 4460,Park Ave after Commander Pl,47.520031,-52.786334,feeder stop,F2,3120
-4465,Park Ave after Valleyview Ave,47.519783,-52.788166,feeder stop,"F2, F10",3258
+4465,Park Ave after Valleyview Ave,47.519783,-52.788166,feeder stop,F2,3258
 4470,Park Ave after Parsons Ave,47.5195,-52.790883,feeder stop,F2,3448
 4475,Park Ave at Billard Ave,47.519368,-52.792485,feeder stop,F2,3562
 4480,Park Ave before Winston Ave,47.519478,-52.796497,feeder stop,F2,3828
@@ -715,29 +715,29 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4590,Commonwealth Ave after Smallwood Dr,47.51382,-52.80274,feeder stop,F2,4532
 4595,Commonwealth Ave opp civic 115,47.511876,-52.80036,feeder stop,F2,4491
 4600,Commonwealth Ave opp Francis St,47.51,-52.798,feeder stop,F2,4463
-4610,Jackman Dr opp Ash Pl,47.506511,-52.803758,feeder stop,F10,5042
-4615,Jackman Dr at Pike Pl,47.507098,-52.807711,feeder stop,F10,5245
-4620,Norman Dr,47.505153,-52.807775,feeder stop,F10,5374
-4625,Munden Dr near Hounsell Ave,47.506431,-52.809881,feeder stop,F10,5421
-4630,Munden Dr before Old Placentia Rd,47.505395,-52.811764,feeder stop,F10,5603
-4640,Old Placentia Rd before Smallwood Dr,47.505711,-52.814053,feeder stop,F10,5727
-4645,Smallwood Dr near Old Placentia Rd,47.507301,-52.814385,feeder stop,F10,5653
-4650,Jeffers Dr at Jeffers Pl,47.508773,-52.811116,feeder stop,F10,5358
-4655,Jeffers Dr at Badcock Pl,47.509951,-52.806122,feeder stop,F10,4971
-4660,Jeffers Dr at Woodford Pl,47.511982,-52.804926,feeder stop,F10,4776
-4680,Smallwood Dr civic 85,47.51641,-52.79683,feeder stop,F10,4004
-4685,Smallwood Dr opp Blossom Ave,47.516666,-52.793,feeder stop,F10,3740
-4690,Smallwood Dr before Park Ave,47.518666,-52.789156,feeder stop,F10,3379
-4695,Park Ave before Valleyview Ave,47.51962,-52.788183,feeder stop,"F2, F10",3258
-4700,Park Ave before Worrall Cres,47.519877,-52.783436,feeder stop,"F2, F10",2921
-4705,Park Ave at Rosedale Pl,47.520372,-52.778467,feeder stop,"F2, F10",2581
-4710,Dunns Rd before Topsail Rd,47.522267,-52.777685,feeder stop,"F2, F10",2442
-4715,Topsail Rd near Collision Clinic,47.523744,-52.774069,feeder stop,"F2, F3, F8, F10",2115
-4720,Topsail Rd before Burgeo St,47.524507,-52.77078,feeder stop,"F2, F3, F8, F10",1858
-4725,Topsail Rd civic 623,47.5266,-52.7657,feeder stop,"F8, F10",1416
-4730,Topsail Rd before Thomas St,47.528183,-52.761192,feeder stop,"F2, F3, F8, F10, F12",1039
-4735,Topsail Rd at Holy Sepulchre Cemetery,47.523758,-52.787064,feeder stop,"F3, F8",2969
-4740,Topsail Rd before Blackmarsh Rd,47.524147,-52.790703,feeder stop,"F3, F8",3241
+4610,Jackman Dr opp Ash Pl,47.506511,-52.803758,feeder stop,F2,5042
+4615,Jackman Dr at Pike Pl,47.507098,-52.807711,feeder stop,F2,5245
+4620,Norman Dr,47.505153,-52.807775,feeder stop,F2,5374
+4625,Munden Dr near Hounsell Ave,47.506431,-52.809881,feeder stop,F2,5421
+4630,Munden Dr before Old Placentia Rd,47.505395,-52.811764,feeder stop,F2,5603
+4640,Old Placentia Rd before Smallwood Dr,47.505711,-52.814053,feeder stop,F2,5727
+4645,Smallwood Dr near Old Placentia Rd,47.507301,-52.814385,feeder stop,F2,5653
+4650,Jeffers Dr at Jeffers Pl,47.508773,-52.811116,feeder stop,F2,5358
+4655,Jeffers Dr at Badcock Pl,47.509951,-52.806122,feeder stop,F2,4971
+4660,Jeffers Dr at Woodford Pl,47.511982,-52.804926,feeder stop,F2,4776
+4680,Smallwood Dr civic 85,47.51641,-52.79683,feeder stop,F2,4004
+4685,Smallwood Dr opp Blossom Ave,47.516666,-52.793,feeder stop,F2,3740
+4690,Smallwood Dr before Park Ave,47.518666,-52.789156,feeder stop,F2,3379
+4695,Park Ave before Valleyview Ave,47.51962,-52.788183,feeder stop,F2,3258
+4700,Park Ave before Worrall Cres,47.519877,-52.783436,feeder stop,F2,2921
+4705,Park Ave at Rosedale Pl,47.520372,-52.778467,feeder stop,F2,2581
+4710,Dunns Rd before Topsail Rd,47.522267,-52.777685,feeder stop,F2,2442
+4715,Topsail Rd near Collision Clinic,47.523744,-52.774069,feeder stop,"F2, F3",2115
+4720,Topsail Rd before Burgeo St,47.524507,-52.77078,feeder stop,"F2, F3",1858
+4725,Topsail Rd civic 623,47.5266,-52.7657,feeder stop,"F2, F3",1416
+4730,Topsail Rd before Thomas St,47.528183,-52.761192,feeder stop,"F2, F3, F10",1039
+4735,Topsail Rd at Holy Sepulchre Cemetery,47.523758,-52.787064,feeder stop,F3,2969
+4740,Topsail Rd before Blackmarsh Rd,47.524147,-52.790703,feeder stop,F3,3241
 4745,Topsail Rd after Blackmarsh Rd,47.524511,-52.794133,feeder stop,F3,3462
 4750,Topsail Rd after Blackmarsh Rd,47.5242,-52.796569,feeder stop,F3,3647
 4755,Farrell Dr civic 24,47.525897,-52.799461,feeder stop,F3,3791
@@ -745,7 +745,7 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4765,Farrell Dr at Wyatt Blvd,47.529486,-52.799425,feeder stop,F3,3744
 4770,Mount Carson Ave opp Dunluce Cres,47.52845,-52.80609,feeder stop,F3,4227
 4771,Mount Carson Ave after Larsen St,47.53195,-52.80634,feeder stop,F3,4226
-4775,Coefield St,47.546525,-52.749839,feeder stop,F9,1186
+4775,Coefield St,47.546525,-52.749839,feeder stop,F8,1186
 4780,Blackhead Rd before Water St,47.5487,-52.71807,walk to nearby stop,,138
 4785,Masonic Park Court A,47.533939,-52.807983,feeder stop,F3,4344
 4790,Masonic Park Court C,47.533886,-52.810828,feeder stop,F3,4557
@@ -760,23 +760,23 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4850,Corrisande Dr after Topsail Rd,47.528931,-52.82968,feeder stop,F3,5997
 4855,Corrisande Dr before Clyde Ave,47.525425,-52.831861,feeder stop,F3,6207
 4860,Clyde Ave before Bruce St,47.523511,-52.837374,feeder stop,F3,6650
-4880,Old Placentia Rd at Sobeys,47.512056,-52.824779,feeder stop,F8,6104
-4885,Olympic Dr opp Glacier Arena,47.506477,-52.819788,feeder stop,F8,6049
-4895,Ashford Dr opp Waterloo Cres,47.508242,-52.814033,feeder stop,F8,5577
-4900,Ashford Dr before McGill Cres,47.511524,-52.816914,feeder stop,F8,5593
-4905,Ashford Dr at Princeton Cres,47.511372,-52.810342,feeder stop,F8,5163
-4910,Smallwood Dr before Carleton Dr,47.511009,-52.808216,feeder stop,F8,5044
-4915,Commonwealth Ave opp Sunrise Ave,47.515214,-52.804061,feeder stop,F8,4546
-4920,Commonwealth Ave opp Edinburgh Dr,47.517,-52.8065,feeder stop,F8,4626
-4925,Commonwealth Ave opp St Davids Ave,47.519165,-52.807412,feeder stop,F8,4599
-4930,Commonwealth Ave opp Glendale Ave,47.521681,-52.807372,feeder stop,F8,4504
-4935,Topsail Rd before Forsey Pl,47.523362,-52.801661,feeder stop,F8,4039
-4940,Topsail Rd at Forsey Pl,47.523649,-52.79901,feeder stop,F8,3840
-4945,Topsail Rd after Blackmarsh Rd,47.524022,-52.790961,feeder stop,"F3, F8",3241
-4950,Topsail Rd at Mary Queen of the World,47.523548,-52.786349,feeder stop,"F3, F8",2969
-4955,Aberdeen Ave at Stavanger Dr,47.617754,-52.715629,feeder stop,F11,2033
-1000,Village Shopping Centre,47.533785,-52.750122,trunk stop,"T2, F8, F10, F12, F32",0
-4245,Hopeall St before Canada Dr,47.530919,-52.776811,feeder stop,F9,2011
+4880,Old Placentia Rd at Sobeys,47.512056,-52.824779,feeder stop,F3,6104
+4885,Olympic Dr opp Glacier Arena,47.506477,-52.819788,feeder stop,F3,6049
+4895,Ashford Dr opp Waterloo Cres,47.508242,-52.814033,feeder stop,F3,5577
+4900,Ashford Dr before McGill Cres,47.511524,-52.816914,feeder stop,F3,5593
+4905,Ashford Dr at Princeton Cres,47.511372,-52.810342,feeder stop,F3,5163
+4910,Smallwood Dr before Carleton Dr,47.511009,-52.808216,feeder stop,F3,5044
+4915,Commonwealth Ave opp Sunrise Ave,47.515214,-52.804061,feeder stop,F3,4546
+4920,Commonwealth Ave opp Edinburgh Dr,47.517,-52.8065,feeder stop,F3,4626
+4925,Commonwealth Ave opp St Davids Ave,47.519165,-52.807412,feeder stop,F3,4599
+4930,Commonwealth Ave opp Glendale Ave,47.521681,-52.807372,feeder stop,F3,4504
+4935,Topsail Rd before Forsey Pl,47.523362,-52.801661,feeder stop,F3,4039
+4940,Topsail Rd at Forsey Pl,47.523649,-52.79901,feeder stop,F3,3840
+4945,Topsail Rd after Blackmarsh Rd,47.524022,-52.790961,feeder stop,F3,3241
+4950,Topsail Rd at Mary Queen of the World,47.523548,-52.786349,feeder stop,F3,2969
+4955,Aberdeen Ave at Stavanger Dr,47.617754,-52.715629,feeder stop,F9,2033
+1000,Village Shopping Centre,47.533785,-52.750122,trunk stop,"T2, F10, F29",0
+4245,Hopeall St before Canada Dr,47.530919,-52.776811,feeder stop,F8,2011
 2780,Freshwater Rd after Anderson Ave,47.563267,-52.733853,trunk stop,"T1, T2",0
 1645,Elizabeth Ave before Halliday Pl,47.570949,-52.730232,feeder stop,F6,475
 1160,College of the North Atlantic,47.587286,-52.720606,walk to nearby stop,,717
@@ -784,14 +784,14 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 1290,Hamilton Ave near Shaw St,47.547753,-52.731197,"removed (trunk passes, stop consolidated)",,293
 1405,Kings Bridge Rd at Lake Ave,47.575778,-52.702933,trunk stop,T1,0
 1490,Middleton St before Rutledge Cres,47.599232,-52.693019,feeder stop,F5,1401
-1600,Avalon Mall,47.55998,-52.757503,trunk stop,"T1, F7, F9, F18, F21",0
-1395,Military Rd opp St Thomas Church,47.571195,-52.702342,trunk stop,"T1, T2, F22, F29",0
-2190,Water St at Convention Centre,47.559411,-52.711767,trunk stop,"T2, F27",0
+1600,Avalon Mall,47.55998,-52.757503,trunk stop,"T1, F7, F8, F15, F18",0
+1395,Military Rd opp St Thomas Church,47.571195,-52.702342,trunk stop,"T1, T2, F19, F26",0
+2190,Water St at Convention Centre,47.559411,-52.711767,trunk stop,"T2, F24",0
 2750,Parade St,47.56542,-52.715147,walk to nearby stop,,101
-1525,Torbay Road Mall,47.592078,-52.709657,trunk stop,"T1, F5, F11, F13",0
+1525,Torbay Road Mall,47.592078,-52.709657,trunk stop,"T1, F5, F9, F11",0
 1455,East White Hills Rd before Newfoundland Dr,47.591095,-52.686041,feeder stop,F5,1766
-2100,Highland Dr opp Tamarack St,47.604769,-52.71705,feeder stop,F11,695
-1245,Crosbie Rd bldg 17,47.556355,-52.74409,feeder stop,F9,492
+2100,Highland Dr opp Tamarack St,47.604769,-52.71705,feeder stop,F9,695
+1245,Crosbie Rd bldg 17,47.556355,-52.74409,feeder stop,F8,492
 3785,Main Rd opp Petty Harbour Rd,47.462717,-52.77208,feeder stop,F1,8047
 3955,Main Rd opp Ruby Line,47.487161,-52.76776,feeder stop,F1,5335
 3860,Shoal Bay Rd at Park Ln,47.436518,-52.759482,feeder stop,F1,10838
@@ -799,82 +799,82 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 2025,Torbay Rd at Highland Dr,47.604547,-52.71794,walk to nearby stop,,717
 5040,Stavanger Dr near  Staples,47.616535,-52.716709,walk to nearby stop,,1913
 1815,Kings Bridge Rd at Winter Ave,47.576047,-52.703239,trunk stop,T1,0
-2895,Linegar Ave at St John Bosco School,47.544327,-52.70977,feeder stop,F26,897
+2895,Linegar Ave at St John Bosco School,47.544327,-52.70977,feeder stop,F23,897
 2330,Waterford Bridge Rd opp Hospital,47.527894,-52.749629,walk to nearby stop,,656
-3485,Forest Rd at Miller Ctr,47.576062,-52.695607,feeder stop,F22,564
+3485,Forest Rd at Miller Ctr,47.576062,-52.695607,feeder stop,F19,564
 4555,Ruth Ave opp Mount Pearl Intermediate,47.514889,-52.82015,feeder stop,F2,5662
 4605,Commonwealth Ave after Richard Nolan Dr,47.508314,-52.795794,feeder stop,F2,4448
-4665,Smallwood Dr before Commonwealth Ave,47.513538,-52.804235,feeder stop,"F8, F10",4645
+4665,Smallwood Dr before Commonwealth Ave,47.513538,-52.804235,feeder stop,"F2, F3",4645
 4830,Humber Dr at Topsail Rd,47.525333,-52.813283,feeder stop,F3,4834
 1580,Elizabeth Ave after Paton St,47.56492,-52.738388,walk to nearby stop,,306
 1630,Elizabeth Ave before Anderson Ave,47.564885,-52.738207,walk to nearby stop,,306
 1110,Crosbie Rd at Swilers Club,47.558827,-52.742499,walk to nearby stop,,367
 3375,Newfoundland Dr near Torbay Rd,47.598969,-52.712678,"removed (trunk passes, stop consolidated)",,103
-3970,Bay Bulls Rd opp Irving,47.5234,-52.74818,feeder stop,F32,1164
+3970,Bay Bulls Rd opp Irving,47.5234,-52.74818,feeder stop,F29,1164
 3720,Mogridge St before Bay Bulls Rd,47.511656,-52.75558,feeder stop,F1,2497
 3945,Main Rd opp civic 64,47.483144,-52.768067,feeder stop,F1,5789
 1050,Hamilton Ave before Shaw St,47.547672,-52.731132,"removed (trunk passes, stop consolidated)",,293
-2440,Waterford Bridge Rd at Hospital,47.528217,-52.748555,feeder stop,"F12, F25",630
-1100,Crosbie Rd bldg 30,47.55657,-52.743977,feeder stop,F9,492
+2440,Waterford Bridge Rd at Hospital,47.528217,-52.748555,feeder stop,"F10, F22",630
+1100,Crosbie Rd bldg 30,47.55657,-52.743977,feeder stop,F8,492
 1570,Elizabeth Ave at Arts and Admin Bldg,47.570761,-52.730911,feeder stop,F6,475
-1700,Torbay Rd opp Torbay Road Mall,47.591924,-52.709459,trunk stop,"T1, F5, F11, F13",0
-4890,Smallwood Dr before Old Placentia Rd,47.506286,-52.81626,feeder stop,F8,5832
-1485,Montague St before Pole Cres,47.599875,-52.690344,feeder stop,"F5, F13",1597
-3030,Blackmarsh Rd at Rockcliffe Apts,47.544803,-52.74182,feeder stop,F20,599
+1700,Torbay Rd opp Torbay Road Mall,47.591924,-52.709459,trunk stop,"T1, F5, F9, F11",0
+4890,Smallwood Dr before Old Placentia Rd,47.506286,-52.81626,feeder stop,F3,5832
+1485,Montague St before Pole Cres,47.599875,-52.690344,feeder stop,"F5, F11",1597
+3030,Blackmarsh Rd at Rockcliffe Apts,47.544803,-52.74182,feeder stop,F17,599
 3090,Empire Ave before Grenfell Ave,47.559991,-52.733936,trunk stop,"T1, T2",0
 2610,Kelsey Dr at Walmart,47.555126,-52.782729,walk to nearby stop,,1968
 1850,Freshwater Rd after Parade St,47.564176,-52.715183,"removed (trunk passes, stop consolidated)",,117
 1590,Freshwater Rd near Crosbie Rd,47.561489,-52.745689,walk to nearby stop,,72
-1150,MUN Centre,47.57337,-52.735682,trunk stop,"T1, F17, F19, F23",0
+1150,MUN Centre,47.57337,-52.735682,trunk stop,"T1, F14, F16, F20",0
 2690,Anderson Ave before Freshwater Rd,47.563933,-52.733546,walk to nearby stop,,87
 1155,Confed Bldg,47.582554,-52.72561,walk to nearby stop,,199
-2465,Brookfield Rd before Cormack St,47.521474,-52.765045,feeder stop,F25,1769
+2465,Brookfield Rd before Cormack St,47.521474,-52.765045,feeder stop,F22,1769
 1085,Empire Ave at Kellys Brook Apts,47.558004,-52.738151,trunk stop,"T1, T2, T3",0
-3135,Blackmarsh Rd before Mercers Ln,47.544971,-52.741785,feeder stop,F20,599
+3135,Blackmarsh Rd before Mercers Ln,47.544971,-52.741785,feeder stop,F17,599
 3080,Freshwater Rd before Anderson Ave,47.56313,-52.734015,trunk stop,"T1, T2",0
 3390,Newfoundland Dr before Musgrave St,47.596336,-52.724275,trunk stop,T1,0
-3270,Majors Path opp International Pl,47.604408,-52.735844,feeder stop,F24,1243
+3270,Majors Path opp International Pl,47.604408,-52.735844,feeder stop,F21,1243
 3345,Rhodora St,47.601297,-52.737581,walk to nearby stop,,1055
 3235,Newfoundland Dr after Calgary St,47.596484,-52.723552,trunk stop,T1,0
 1840,Military Rd at Gathering Pl,47.567812,-52.709087,"removed (trunk passes, stop consolidated)",,296
-4185,Murphys Lane opp Erley St,47.551969,-52.745581,feeder stop,F9,880
+4185,Murphys Lane opp Erley St,47.551969,-52.745581,feeder stop,F8,880
 4585,Sunrise Ave before Teasdale St,47.514221,-52.807511,feeder stop,F2,4827
 4495,Park Ave after Centennial St,47.520333,-52.805833,feeder stop,F2,4442
-4870,Sagona Ave after Kyle Ave,47.516867,-52.835814,feeder stop,F8,6704
-4440,Mount Pearl Square,47.523852,-52.7805,feeder stop,"F2, F3, F8, F10",2534
+4870,Sagona Ave after Kyle Ave,47.516867,-52.835814,feeder stop,F3,6704
+4440,Mount Pearl Square,47.523852,-52.7805,feeder stop,"F2, F3",2534
 1990,New Cove Rd after Kennas Hill,47.577961,-52.70609,trunk stop,T1,0
-6007,Kelsey Dr at Home Depot,47.553794,-52.781517,feeder stop,"F16, F18",1929
-6004,Great Eastern Ave opp Nonia St,47.549005,-52.793698,feeder stop,F16,2978
+6007,Kelsey Dr at Home Depot,47.553794,-52.781517,feeder stop,"F13, F15",1929
+6004,Great Eastern Ave opp Nonia St,47.549005,-52.793698,feeder stop,F13,2978
 2970,Forbes St opp Kennedy Rd,47.536619,-52.745292,walk to nearby stop,,140
-4960,Clinch Cres at Faculty of Medicine,47.573008,-52.740561,feeder stop,F23,365
+4960,Clinch Cres at Faculty of Medicine,47.573008,-52.740561,feeder stop,F20,365
 4975,Main Rd before Doolings Line,47.47373,-52.76955,feeder stop,F1,6839
 4980,Clinch Cres before Prince Philip Dr,47.57154,-52.73818,"removed (trunk passes, stop consolidated)",,265
-4982,Clinch Cres opp Faculty of Medicine,47.573146,-52.740488,feeder stop,F23,365
-4985,Clinch Cres opp Janeway,47.572354,-52.744499,feeder stop,F23,671
+4982,Clinch Cres opp Faculty of Medicine,47.573146,-52.740488,feeder stop,F20,365
+4985,Clinch Cres opp Janeway,47.572354,-52.744499,feeder stop,F20,671
 5020,Larkhall St opp Donegal Pl,47.56326,-52.75504,walk to nearby stop,,171
 5025,Harvey Rd at Longs Hill,47.56445,-52.71368,trunk stop,"T2, F4",0
 5030,Road De Luxe at Pratt Pl,47.537492,-52.738747,"removed (trunk passes, stop consolidated)",,92
 5035,Road De Luxe opp Pratt Pl,47.537639,-52.739122,"removed (trunk passes, stop consolidated)",,92
-5045,Whiteway St before Bonaventure Ave,47.570705,-52.724602,feeder stop,F23,713
-5050,Rodney St,47.57101,-52.72746,feeder stop,F23,684
+5045,Whiteway St before Bonaventure Ave,47.570705,-52.724602,feeder stop,F20,713
+5050,Rodney St,47.57101,-52.72746,feeder stop,F20,684
 5070,Empire Ave before Kings Bridge Rd,47.57518,-52.70215,walk to nearby stop,,122
-5085,Portugal Cove Rd after Prince Philip Dr,47.58902,-52.71871,feeder stop,F14,654
+5085,Portugal Cove Rd after Prince Philip Dr,47.58902,-52.71871,feeder stop,F12,654
 5090,Portugal Cove Rd at Renouf Pl,47.58727,-52.71566,walk to nearby stop,,486
 5095,New Cove Rd before Cherry Hill Rd,47.58449,-52.71159,walk to nearby stop,,182
-6006,Kelsey Dr before Kiwanis St,47.550969,-52.77967,feeder stop,"F16, F18",1942
-6008,Pippy Pl after Duffy Pl,47.562292,-52.77225,feeder stop,F18,979
-6009,Pippy Pl after Austin St,47.559604,-52.770502,feeder stop,F18,949
-6010,Great Eastern Ave opp Gil Eannes Dr,47.54809,-52.7969,feeder stop,"F16, F18",3239
-6011,Pippy Pl before Kenmount Rd,47.555684,-52.767203,feeder stop,F18,862
+6006,Kelsey Dr before Kiwanis St,47.550969,-52.77967,feeder stop,"F13, F15",1942
+6008,Pippy Pl after Duffy Pl,47.562292,-52.77225,feeder stop,F15,979
+6009,Pippy Pl after Austin St,47.559604,-52.770502,feeder stop,F15,949
+6010,Great Eastern Ave opp Gil Eannes Dr,47.54809,-52.7969,feeder stop,"F13, F15",3239
+6011,Pippy Pl before Kenmount Rd,47.555684,-52.767203,feeder stop,F15,862
 6012,Lemarchant Rd after Brazil St,47.55976,-52.7183,feeder stop,F4,519
-6013,Great Eastern Ave opp Pluto St,47.546961,-52.799283,feeder stop,"F16, F18",3453
-6014,Great Eastern Ave before Kenmount Rd,47.542959,-52.8003,feeder stop,"F16, F18",3728
-6015,Kenmount Rd at Honda,47.543457,-52.795364,feeder stop,"F7, F16, F18, F21",3384
+6013,Great Eastern Ave opp Pluto St,47.546961,-52.799283,feeder stop,"F13, F15",3453
+6014,Great Eastern Ave before Kenmount Rd,47.542959,-52.8003,feeder stop,"F13, F15",3728
+6015,Kenmount Rd at Honda,47.543457,-52.795364,feeder stop,"F7, F13, F15, F18",3384
 2027,Torbay Rd opp Majors Path,47.611192,-52.722187,walk to nearby stop,,1504
 1202,Ridge Rd at YMCA,47.590126,-52.729192,trunk stop,T1,0
 1991,New Cove Rd after Elizabeth Ave,47.584075,-52.710747,walk to nearby stop,,166
 1992,New Cove Rd civic 148,47.585289,-52.712111,walk to nearby stop,,198
-5091,Portugal Cove Rd opp Smallwoods Ln,47.586966,-52.714597,feeder stop,F14,427
+5091,Portugal Cove Rd opp Smallwoods Ln,47.586966,-52.714597,feeder stop,F12,427
 4531,Michener Ave before Donovan St,47.52018,-52.818961,walk to nearby stop,,5386
 4541,Michener Ave near Harnum Cres,47.52161,-52.820236,walk to nearby stop,,5436
 4751,Wyatt Blvd opp Holden St,47.532241,-52.800623,feeder stop,F3,3806
@@ -887,27 +887,27 @@ stop_id,stop_name,lat,lon,status,lines,walk_to_trunk_m
 4766,Wyatt Blvd at Farrell Dr,47.529543,-52.79976,feeder stop,F3,3744
 4761,Farrell Dr after Nash Cres,47.527258,-52.801885,walk to nearby stop,,3953
 4756,Farrell Dr before Evans Pl,47.525621,-52.798924,feeder stop,F3,3791
-4942,Topsail Rd before Blackmarsh Rd,47.524192,-52.795065,feeder stop,F8,3539
+4942,Topsail Rd before Blackmarsh Rd,47.524192,-52.795065,feeder stop,F3,3539
 6052,Ladysmith Dr at Maurice Putt Cres,47.550717,-52.789212,walk to nearby stop,,2593
-6053,Ladysmith Dr after Ophelia Pl,47.552863,-52.790386,feeder stop,F16,2591
-6054,Ladysmith Dr opp Petite Forte Dr,47.555172,-52.794913,feeder stop,F16,2831
-6055,Petite Forte Dr opp Dauntless St,47.551306,-52.794478,feeder stop,F16,2938
+6053,Ladysmith Dr after Ophelia Pl,47.552863,-52.790386,feeder stop,F13,2591
+6054,Ladysmith Dr opp Petite Forte Dr,47.555172,-52.794913,feeder stop,F13,2831
+6055,Petite Forte Dr opp Dauntless St,47.551306,-52.794478,feeder stop,F13,2938
 6060,Kiwanis St near Kelsey Dr,47.550996,-52.781214,walk to nearby stop,,2041
 6057,Kiwanis St before Hamlet St,47.549413,-52.785267,walk to nearby stop,,2392
-4956,Whiterose Dr near Aberdeen Ave,47.619686,-52.719709,feeder stop,F11,2306
-4957,Whiterose Dr before Torbay Rd,47.617758,-52.722129,feeder stop,F11,2158
-6062,Hebron Way near Torbay Rd,47.617298,-52.724415,feeder stop,F11,2180
-6063,Torbay Rd opp Harbour View Ave,47.607461,-52.720624,feeder stop,"F11, F24",1077
+4956,Whiterose Dr near Aberdeen Ave,47.619686,-52.719709,feeder stop,F9,2306
+4957,Whiterose Dr before Torbay Rd,47.617758,-52.722129,feeder stop,F9,2158
+6062,Hebron Way near Torbay Rd,47.617298,-52.724415,feeder stop,F9,2180
+6063,Torbay Rd opp Harbour View Ave,47.607461,-52.720624,feeder stop,"F9, F21",1077
 6065,Harvey Rd after Bonaventure Ave,47.565532,-52.711626,walk to nearby stop,,196
 6066,The Boulevard before Legion Rd,47.581536,-52.69466,feeder stop,F5,901
 6067,The Boulevard near Legion Rd,47.581816,-52.69462,feeder stop,F5,901
 1475,Montague St at Watson St,47.597811,-52.688054,feeder stop,F5,1737
 6069,Paradise Double Ice Complex,47.523718,-52.870487,walk to nearby stop,,9106
-4866,Sagona Ave before Dundee Ave,47.519817,-52.83881,feeder stop,F8,6838
-4871,Sagona Ave before Glencoe Dr,47.514631,-52.834956,feeder stop,F8,6717
-4872,Old Placentia Rd after Glencoe Dr,47.513011,-52.83237,feeder stop,F8,6594
-4881,Olympic Dr before Wilson Cres,47.508686,-52.821171,feeder stop,F8,6021
-4879,Old Placentia Rd at Cunard Pl,47.512451,-52.82741,feeder stop,F8,6270
+4866,Sagona Ave before Dundee Ave,47.519817,-52.83881,feeder stop,F3,6838
+4871,Sagona Ave before Glencoe Dr,47.514631,-52.834956,feeder stop,F3,6717
+4872,Old Placentia Rd after Glencoe Dr,47.513011,-52.83237,feeder stop,F3,6594
+4881,Olympic Dr before Wilson Cres,47.508686,-52.821171,feeder stop,F3,6021
+4879,Old Placentia Rd at Cunard Pl,47.512451,-52.82741,feeder stop,F3,6270
 4516,Ruth Ave opp MPSH,47.516543,-52.819629,feeder stop,F2,5560
 4586,Sunrise Ave before Commonwealth Ave,47.514443,-52.805211,feeder stop,F2,4662
 4226,Empire Ave before Blackmarsh Rd,47.541694,-52.765251,walk to nearby stop,,1436
