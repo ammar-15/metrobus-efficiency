@@ -110,8 +110,8 @@ def build_map(net: Network, hubs: list[int], trunks: list[Line], feeders: list[L
         color = FEEDER_COLORS[i % len(FEEDER_COLORS)]
         geom = router.route(_coords(net, _stop_waypoints(net, f)))
         tip = (
-            f"{f.name} (from {net.nodes.at[f.hub, 'name']}): every {f.headway_min:g} min · "
-            f"{f.run_min:.0f} min loop · {f.buses(cfg)} bus(es)"
+            f"{f.name} (follows route {f.source}): every {f.headway_min:g} min, "
+            f"{f.run_min:.0f} min end to end, {f.buses(cfg)} bus(es)"
         )
         if f.flags:
             tip += " · ⚠ " + "; ".join(f.flags)

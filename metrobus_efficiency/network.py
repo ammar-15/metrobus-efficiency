@@ -153,3 +153,20 @@ def _connect_components(net: Network) -> None:
         main += list(comp)
         mlat = net.nodes.loc[main, "lat"].to_numpy()
         mlon = net.nodes.loc[main, "lon"].to_numpy()
+
+
+def route_patterns(feed: Feed, net: Network, min_trips: int = 2) -> list[dict]:
+    """Every distinct stop sequence today's routes run, as place ids (busiest first per route)."""
+    st = feed.stop_times[["trip_id", "stop_id", "stop_sequence"]].merge(
+        feed.trips[["trip_id", "route_id", "route_short_name"]], on="trip_id"
+    )
+    st["node"] = st["stop_id"].map(net.stop_to_node)
+    st = st.dropna(subset=["node"]).sort_values(["trip_id", "stop_sequence"])
+    seqs = st.groupby("trip_id").agg(route_id=("route_id", "first"), name=("route_short_name", "first"), nodes=("node", list))
+    seqs["path"] = seqs["nodes"].apply(lambda ns: tuple(int(n) for i, n in enumerate(ns) if i == 0 or n != ns[i - 1]))
+    out = []
+    for (rid, name, path), g in seqs.groupby(["route_id", "name", "path"]):
+        if len(g) >= min_trips and len(path) >= 2:
+            out.append({"route_id": rid, "name": str(name), "path": list(path), "trips": int(len(g))})
+    out.sort(key=lambda p: -p["trips"])
+    return out

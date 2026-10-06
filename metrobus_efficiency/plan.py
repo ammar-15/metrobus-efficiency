@@ -37,7 +37,10 @@ def pick_hubs(net: Network, cfg: Config) -> list[int]:
         if len(hubs) >= cfg.n_hubs or area[k] <= 0 or area[k] < floor:
             break
         if all(d[k, nodes.index.get_loc(h)] >= cfg.hub_min_spacing_m for h in hubs):
-            hubs.append(int(ids[k]))
+            # Name the hub after its busiest stop (e.g. the mall terminal, not a stop at its edge).
+            area_idx = np.where(d[k] <= cfg.hub_merge_radius_m)[0]
+            best = int(area_idx[np.argmax(score[area_idx])])
+            hubs.append(int(ids[best]))
     return hubs
 
 
@@ -54,12 +57,15 @@ class Line:
     run_min: float  # one-way (trunk) or full-loop (feeder) running time, minutes
     headway_min: float
     hub: int | None = None  # feeder's anchor hub
-    hubs: list[int] = field(default_factory=list)  # trunk hubs, in order
+    hubs: list[int] = field(default_factory=list)  # trunk hubs in order, or a feeder's trunk ends
     flags: list[str] = field(default_factory=list)
+    two_way: bool | None = None  # feeders: True for out-and-back or end-to-end, False for a loop
+    source: str | None = None  # feeders: today's route it follows
 
     @property
     def cycle_min(self) -> float:
-        return self.run_min * (2 if self.kind == "trunk" else 1)
+        both = self.kind == "trunk" or bool(self.two_way)
+        return self.run_min * (2 if both else 1)
 
     def buses(self, cfg: Config) -> int:
         return max(1, math.ceil(self.cycle_min * cfg.layover_factor / self.headway_min))
@@ -262,51 +268,13 @@ def build_trunks(net: Network, hubs: list[int], cfg: Config) -> tuple[list[Line]
 
 
 # --------------------------------------------------------------------------- #
-# Feeder loops
+# Feeders
 # --------------------------------------------------------------------------- #
-
-class _TimeCache:
-    def __init__(self, net: Network):
-        self.net = net
-        self._cache: dict[int, dict[int, float]] = {}
-
-    def __call__(self, a: int, b: int) -> float:
-        if a == b:
-            return 0.0
-        if a not in self._cache:
-            self._cache[a] = nx.single_source_dijkstra_path_length(self.net.graph, a, weight="time")
-        return self._cache[a].get(b, self.net.straight_time(a, b))
-
-
-def _loop_order(hub: int, members: list[int], tt: _TimeCache, two_opt: bool = True) -> tuple[list[int], float]:
-    """Nearest-neighbour tour from the hub through all members and back, then 2-opt."""
-    tour = [hub]
-    left = set(members)
-    while left:
-        nxt = min(left, key=lambda m: tt(tour[-1], m))
-        tour.append(nxt)
-        left.remove(nxt)
-    tour.append(hub)
-
-    def cost(t):
-        return sum(tt(u, v) for u, v in zip(t, t[1:]))
-
-    best = cost(tour)
-    improved = two_opt
-    while improved and len(tour) > 4:
-        improved = False
-        for i in range(1, len(tour) - 2):
-            for k in range(i + 1, len(tour) - 1):
-                cand = tour[:i] + tour[i : k + 1][::-1] + tour[k + 1 :]
-                c = cost(cand)
-                if c + 1e-6 < best:
-                    tour, best, improved = cand, c, True
-    return tour, best
-
-
-def _bearing(net: Network, hub: int, n: int) -> float:
-    h, p = net.nodes.loc[hub], net.nodes.loc[n]
-    return math.atan2(p.lat - h.lat, (p.lon - h.lon) * math.cos(math.radians(h.lat)))
+#
+# Feeders reuse today's routes where they serve neighbourhoods away from the
+# trunks: each route is cut where it reaches trunk territory, and the uncovered
+# part becomes a feeder that ends at the nearest trunk stop. Streets, stops and
+# running times all come from today's schedule.
 
 
 def served_by_trunks(net: Network, trunks: list[Line], cfg: Config) -> set[int]:
@@ -322,88 +290,113 @@ def served_by_trunks(net: Network, trunks: list[Line], cfg: Config) -> set[int]:
     return out
 
 
-def build_feeders(net: Network, hubs: list[int], trunks: list[Line], cfg: Config) -> tuple[list[Line], dict[int, int]]:
-    covered = served_by_trunks(net, trunks, cfg)
-    todo = [int(n) for n in net.nodes.index if n not in covered and net.nodes.at[n, "departures"] > 0]
-    if not todo:
+def _within_walk(net: Network, nodes: list[int], radius: float) -> set[int]:
+    if not nodes:
+        return set()
+    lat = net.nodes["lat"].to_numpy()
+    lon = net.nodes["lon"].to_numpy()
+    ids = net.nodes.index.to_numpy()
+    out: set[int] = set()
+    for n in set(nodes):
+        d = haversine(net.nodes.at[n, "lat"], net.nodes.at[n, "lon"], lat, lon)
+        out |= {int(x) for x in ids[d <= radius]}
+    return out
+
+
+def _runs(flags: list[bool], max_gap: int) -> list[tuple[int, int]]:
+    """Index ranges where flags are True, joining runs separated by short gaps."""
+    runs: list[list[int]] = []
+    for i, f in enumerate(flags):
+        if not f:
+            continue
+        if runs and i - runs[-1][1] - 1 <= max_gap:
+            runs[-1][1] = i
+        else:
+            runs.append([i, i])
+    return [(a, b) for a, b in runs]
+
+
+def _segment_time(net: Network, path: list[int]) -> float:
+    t = 0.0
+    for u, v in zip(path, path[1:]):
+        if net.graph.has_edge(u, v):
+            t += net.graph[u][v]["time"]
+        else:
+            t += net.straight_time(u, v)
+    return t
+
+
+def build_feeders(
+    net: Network, hubs: list[int], trunks: list[Line], cfg: Config, patterns: list[dict] | None = None
+) -> tuple[list[Line], dict[int, int]]:
+    if not patterns:
         return [], {}
+    covered = served_by_trunks(net, trunks, cfg)
+    trunk_stops = {s for t in trunks for s in t.stops}
+    hub_set = set(hubs)
+    active = {int(n) for n in net.nodes.index if net.nodes.at[n, "departures"] > 0}
+    need = active - covered
 
-    # Each uncovered stop goes to the hub it can reach fastest.
-    dist, paths = nx.multi_source_dijkstra(net.graph, set(hubs), weight="time")
-    assign: dict[int, list[int]] = {h: [] for h in hubs}
-    for n in todo:
-        if n in paths:
-            assign[paths[n][0]].append(n)
+    # Routes that reach the most stranded stops go first.
+    def gain(p):
+        return len(set(p["path"]) & need)
 
-    tt = _TimeCache(net)
-    max_s = cfg.max_loop_min * 60
     feeders: list[Line] = []
     owner: dict[int, int] = {}
-
-    for hub in hubs:
-        members = assign[hub]
-        if not members:
+    for pat in sorted(patterns, key=gain, reverse=True):
+        path = pat["path"]
+        if not (set(path) & need):
             continue
-        # Sweep around the hub, starting at the widest empty gap so no loop straddles it.
-        ang = sorted(members, key=lambda m: _bearing(net, hub, m))
-        b = [_bearing(net, hub, m) for m in ang]
-        gaps = [(b[(i + 1) % len(b)] - b[i]) % (2 * math.pi) for i in range(len(b))]
-        start = (int(np.argmax(gaps)) + 1) % len(ang)
-        ang = ang[start:] + ang[:start]
-
-        groups: list[list[int]] = []
-        cur: list[int] = []
-        for m in ang:
-            trial = cur + [m]
-            _, t = _loop_order(hub, trial, tt, two_opt=False)
-            if cur and t > max_s:
-                groups.append(cur)
-                cur = [m]
-            else:
-                cur = trial
-        if cur:
-            groups.append(cur)
-
-        # Fold tiny groups into a neighbour when it still fits the time limit.
-        merged: list[list[int]] = []
-        for g in groups:
-            if merged and len(g) < cfg.min_loop_stops:
-                _, t = _loop_order(hub, merged[-1] + g, tt)
-                if t <= max_s * 1.15:
-                    merged[-1] += g
-                    continue
-            merged.append(g)
-        if len(merged) > 1 and len(merged[0]) < cfg.min_loop_stops:
-            _, t = _loop_order(hub, merged[1] + merged[0], tt)
-            if t <= max_s * 1.15:
-                merged[1] += merged.pop(0)
-
-        for g in merged:
-            tour, t = _loop_order(hub, g, tt)
-            path = [tour[0]]
-            for u, v in zip(tour, tour[1:]):
-                try:
-                    seg = net.path(u, v)
-                except nx.NetworkXNoPath:
-                    seg = [u, v]
-                path += seg[1:]
+        outside = [n not in covered for n in path]
+        for a, b in _runs(outside, max_gap=3):
+            if not (set(path[a : b + 1]) & need):
+                continue
+            # Extend along the route to the nearest trunk stop at each end, so riders can transfer.
+            lo, hi = a, b
+            for k in range(a - 1, max(a - 15, -1), -1):
+                if path[k] in trunk_stops:
+                    lo = k
+                    break
+            for k in range(b + 1, min(b + 15, len(path))):
+                if path[k] in trunk_stops:
+                    hi = k
+                    break
+            seg = path[lo : hi + 1]
+            if len(seg) < 2:
+                continue
+            ends = [n for n in (seg[0], seg[-1]) if n in trunk_stops]
+            # Stops: today's stops on the uncovered part, plus the trunk stop(s) it connects to.
+            stops = [n for i, n in enumerate(seg) if (lo + i >= a and lo + i <= b and n in active) or n in ends]
+            stops = list(dict.fromkeys(stops))
+            if len(stops) < 2:
+                continue
+            is_loop = seg[0] == seg[-1]
+            run_s = _segment_time(net, seg)
+            anchor = next((n for n in ends if n in hub_set), ends[0] if ends else None)
             flags = []
-            if t > max_s * 1.15:
-                flags.append("long: these stops are far from any hub; consider on-demand service")
-            if len(g) < cfg.min_loop_stops:
-                flags.append("few stops: candidate for on-demand or merging into a trunk")
+            new_stops = set(stops) & need
+            if len(new_stops) < cfg.min_loop_stops:
+                flags.append("few stops: candidate for on-demand service")
+            if not ends:
+                flags.append("doesn't reach a trunk line: riders can't transfer")
+            if run_s / 60 > cfg.max_loop_min * 1.5:
+                flags.append("long: could be split or partly replaced by on-demand service")
             line = Line(
                 name=f"F{len(feeders) + 1}",
                 kind="feeder",
-                path=path,
-                stops=tour[:-1],
-                run_min=max(t, 60) / 60,
+                path=seg,
+                stops=stops,
+                run_min=max(run_s, 60) / 60,
                 headway_min=cfg.feeder_headway_min,
-                hub=hub,
+                hub=anchor,
+                hubs=ends,
                 flags=flags,
+                two_way=not is_loop,
+                source=pat.get("name"),
             )
-            line.hubs = [hub]
             feeders.append(line)
-            for m in g:
-                owner[m] = len(feeders) - 1
+            served = _within_walk(net, stops, cfg.trunk_catchment_m)
+            for n in served & need:
+                owner[n] = len(feeders) - 1
+            need -= served
     return feeders, owner

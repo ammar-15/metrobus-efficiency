@@ -17,7 +17,7 @@ import pandas as pd
 from .config import Config
 from .gtfs import Feed
 from .metrics import current_metrics
-from .network import Network
+from .network import Network, route_patterns
 from .plan import Line, build_feeders, build_trunks, pick_hubs
 
 # Metrobus 2025 figures (December 2025 financial statements and the statistics page),
@@ -141,10 +141,21 @@ def _line_dict(ln: Line, net: Network, cfg: Config, hub_names: dict[int, str]) -
         label = " – ".join(hub_names[h] for h in (ln.hubs[0], ln.hubs[-1]))
         via = [hub_names[h] for h in ln.hubs[1:-1]]
     else:
-        label = f"Loop from {hub_names[ln.hub]}"
+        a, b = (str(net.nodes.at[n, "name"]) for n in (path[0], path[-1]))
+        label = f"Loop from {a}" if path[0] == path[-1] else f"{a} – {b}"
+        meets = [str(net.nodes.at[n, "name"]) for n in ln.hubs]
         via = []
+        note = f"Follows today's route {ln.source}" if ln.source else ""
+        if meets:
+            note += f", meets the trunk lines at {' and '.join(dict.fromkeys(meets))}."
+        else:
+            note += "."
+
+    if ln.kind == "trunk":
+        note = ""
     return {
         "id": ln.name.lower(),
+        "note": note.strip(", "),
         "name": ln.name,
         "long_name": label,
         "via": via,
@@ -158,6 +169,7 @@ def _line_dict(ln: Line, net: Network, cfg: Config, hub_names: dict[int, str]) -
         "span_h": cfg.service_hours_per_weekday,
         "km": round(_km(net, path), 2),
         "hub": int(ln.hub) if ln.hub is not None else None,
+        "source": ln.source,
         "hubs": [int(h) for h in ln.hubs],
         "flags": ln.flags,
     }
@@ -187,6 +199,7 @@ def build_web_data(feed: Feed, net: Network, cfg: Config) -> dict:
             "lines": today_routes(feed, net),
         }
     ]
+    patterns = route_patterns(feed, net)
     seen_hub_sets: set[tuple[int, ...]] = set()
     for sid, label, n_hubs, th, fh in SCENARIOS:
         c = copy.copy(cfg)
@@ -201,7 +214,7 @@ def build_web_data(feed: Feed, net: Network, cfg: Config) -> dict:
         seen_hub_sets.add(key)
         label = f"{len(hubs)} hubs"
         trunks, _ = build_trunks(net, hubs, c)
-        feeders, _ = build_feeders(net, hubs, trunks, c)
+        feeders, _ = build_feeders(net, hubs, trunks, c, patterns)
         hub_names = {h: str(nodes.at[h, "name"]) for h in hubs}
         scenarios.append(
             {

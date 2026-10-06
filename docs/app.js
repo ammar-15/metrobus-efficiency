@@ -67,7 +67,7 @@
   // ------------------------------------------------------------------ model
   const scenario = () => D.scenarios.find((s) => s.id === state.scenario);
   const editsFor = (sid) => (state.edits[sid] ||= {});
-  const bothWays = (line) => line.kind === "trunk" || (line.kind === "route" && line.cycle_min > line.run_min * 1.2);
+  const bothWays = (line) => line.kind === "trunk" || line.cycle_min > line.run_min * 1.2;
 
   // Apply a line's edits: headway, removed stops, added stops (inserted where they cost the least detour).
   function effective(line, sid) {
@@ -281,7 +281,7 @@
     }
     if (sel) {
       const on = sel.stops.includes(p.id);
-      const isEnd = on && (sel.stops[0] === p.id || sel.stops[sel.stops.length - 1] === p.id) && sel.line.kind !== "feeder";
+      const isEnd = on && (sel.stops[0] === p.id || sel.stops[sel.stops.length - 1] === p.id);
       if (on && !isEnd) html += `<button data-act="remove" data-line="${sel.line.id}">Remove from ${esc(sel.line.name)}</button>`;
       else if (!on) html += `<button data-act="add" data-line="${sel.line.id}">Add to ${esc(sel.line.name)}</button>`;
       else html += `<p>This is where ${esc(sel.line.name)} starts or ends.</p>`;
@@ -422,7 +422,7 @@
     const groups = s.id === "today"
       ? [["", current.lines]]
       : [["Trunk lines between hubs", current.lines.filter((x) => x.line.kind === "trunk")],
-        ["Feeder loops", current.lines.filter((x) => x.line.kind === "feeder")]];
+        ["Feeder lines to the trunks", current.lines.filter((x) => x.line.kind === "feeder")]];
     let html = "";
     for (const [label, ls] of groups) {
       if (label) html += `<li class="group-label" role="presentation">${label}</li>`;
@@ -432,7 +432,7 @@
           <button class="ln-open" data-line="${L2.line.id}">
             ${badge(L2.line, c)}
             <span class="ln-text"><span class="ln-name">${esc(L2.line.long_name || `Route ${L2.line.name}`)}</span>
-            <span class="ln-sub"><b>${fmt(L2.buses)}</b> bus${L2.buses === 1 ? "" : "es"}, ${fmt(L2.run, 0)} min ${L2.line.kind === "feeder" ? "loop" : "end to end"}${L2.changed ? ", edited" : ""}</span></span>
+            <span class="ln-sub"><b>${fmt(L2.buses)}</b> bus${L2.buses === 1 ? "" : "es"}, ${fmt(L2.run, 0)} min ${L2.line.path[0] === L2.line.path[L2.line.path.length - 1] ? "loop" : "end to end"}${L2.changed ? ", edited" : ""}</span></span>
           </button>
           ${stepperHtml(L2)}
         </li>`;
@@ -452,16 +452,15 @@
     const c = colors.get(line.id);
     $("d-badge").outerHTML = `<span class="badge big${line.kind === "feeder" ? " feeder" : ""}" id="d-badge" style="--c:${c}">${esc(line.name)}</span>`;
     $("d-name").textContent = line.long_name || `Route ${line.name}`;
-    $("d-via").textContent = line.via && line.via.length ? `via ${line.via.join(", ")}`
-      : line.kind === "feeder" ? "Starts and ends at the hub, so every trip meets the trunk lines there." : "";
+    $("d-via").textContent = line.via && line.via.length ? `via ${line.via.join(", ")}` : line.note || "";
     $("d-stepper").outerHTML = stepperHtml(L2).replace('class="stepper', 'id="d-stepper" class="stepper');
     wireSteppers($("detail"));
-    const roundTrip = line.kind === "feeder" ? "Loop time" : "Round trip";
+    const isLoop = line.path[0] === line.path[line.path.length - 1];
     $("d-facts").innerHTML = [
       [fmt(L2.buses), "buses needed"],
       [fmt(L2.hours, 0), "bus hours a weekday"],
-      [`${fmt(L2.run, 0)} min`, line.kind === "feeder" ? "around the loop" : "end to end"],
-      [`${fmt(L2.cycle, 0)} min`, roundTrip.toLowerCase() + (line.kind === "feeder" ? "" : " before recovery")],
+      [`${fmt(L2.run, 0)} min`, isLoop ? "around the loop" : "end to end"],
+      [`${fmt(L2.cycle, 0)} min`, isLoop ? "loop time before recovery" : "round trip before recovery"],
     ].map(([v, k]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
 
     const e = (state.edits[state.scenario] || {})[line.id] || {};
@@ -480,7 +479,7 @@
         html += `<li class="gone" style="--c:${c}"><span class="dot"></span><span class="nm">${esc(p.name)}</span><button class="x" data-put="${pid}">put back</button></li>`;
         continue;
       }
-      const locked = line.kind !== "feeder" ? (pid === first || pid === last) : pid === first;
+      const locked = pid === first || pid === last;
       html += `<li class="${hubs.has(pid) ? "hub" : ""}" style="--c:${c}"><span class="dot"></span><span class="nm">${esc(p.name)}</span>
         ${added.has(pid) ? '<span class="tag">added</span>' : ""}
         ${locked ? "" : `<button class="x" data-pid="${pid}">remove</button>`}</li>`;

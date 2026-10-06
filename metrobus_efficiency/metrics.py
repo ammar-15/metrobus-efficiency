@@ -61,8 +61,9 @@ def line_table(lines: list[Line], net: Network, cfg: Config) -> pd.DataFrame:
             {
                 "line": ln.name,
                 "type": ln.kind,
-                "from_to": " → ".join(str(net.nodes.at[h, "name"]) for h in ([ln.path[0], ln.path[-1]] if ln.kind == "trunk" else [ln.hub])),
-                "hubs": " · ".join(str(net.nodes.at[h, "name"]) for h in ln.hubs),
+                "from_to": " → ".join(str(net.nodes.at[h, "name"]) for h in (ln.path[0], ln.path[-1])),
+                "hubs": ", ".join(str(net.nodes.at[h, "name"]) for h in ln.hubs),
+                "follows_route": ln.source or "",
                 "stops": len(ln.stops),
                 "km": round(km, 1),
                 "run_min": round(ln.run_min, 1),

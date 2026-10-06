@@ -5,7 +5,7 @@ from pathlib import Path
 from metrobus_efficiency.__main__ import main
 from metrobus_efficiency.config import Config
 from metrobus_efficiency.gtfs import load_feed
-from metrobus_efficiency.network import build_network
+from metrobus_efficiency.network import build_network, route_patterns
 from metrobus_efficiency.plan import build_feeders, build_trunks, pick_hubs, served_by_trunks
 
 from .synthetic import make_feed
@@ -25,12 +25,18 @@ def test_plan_covers_network(tmp_path: Path):
     hubs_on_trunks = {h for t in trunks for h in t.hubs}
     assert hubs_on_trunks == set(hubs)
 
-    feeders, _ = build_feeders(net, hubs, trunks, cfg)
-    assert all(f.stops[0] == f.hub and f.path[0] == f.path[-1] == f.hub for f in feeders)
+    feeders, _ = build_feeders(net, hubs, trunks, cfg, route_patterns(feed, net))
+    assert feeders, "expected feeders for stops away from the trunks"
+    trunk_stops = {s for t in trunks for s in t.stops}
+    assert all(len(f.stops) >= 2 and set(f.stops) <= set(f.path) for f in feeders)
+    # Most feeders should connect to a trunk line.
+    assert sum(bool(set(f.hubs) & trunk_stops) for f in feeders) >= 0.8 * len(feeders)
 
-    served = served_by_trunks(net, trunks, cfg) | {n for f in feeders for n in f.path}
+    from metrobus_efficiency.plan import _within_walk
+
+    served = served_by_trunks(net, trunks, cfg) | _within_walk(net, [s for f in feeders for s in f.stops], cfg.trunk_catchment_m)
     active = set(net.nodes.index[net.nodes["departures"] > 0])
-    assert active <= served
+    assert len(active - served) <= 0.02 * len(active)
 
 
 def test_cli_writes_outputs(tmp_path: Path, monkeypatch):

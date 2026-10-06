@@ -11,7 +11,7 @@ from .config import Config
 from .gtfs import download_feed, load_feed
 from .mapviz import build_map
 from .metrics import current_metrics, line_table, proposed_metrics
-from .network import build_network
+from .network import build_network, route_patterns
 from .plan import build_feeders, build_trunks, pick_hubs
 from .report import write_outputs
 from .staticmap import build_png
@@ -56,7 +56,8 @@ def main(argv: list[str] | None = None) -> None:
     print("Hubs: " + " | ".join(str(net.nodes.at[h, "name"]) for h in hubs))
 
     trunks, _ = build_trunks(net, hubs, cfg)
-    feeders, _ = build_feeders(net, hubs, trunks, cfg)
+    patterns = route_patterns(feed, net)
+    feeders, _ = build_feeders(net, hubs, trunks, cfg, patterns)
     print(f"Plan: {len(trunks)} trunk lines, {len(feeders)} feeder loops")
 
     cur = current_metrics(feed, net)
