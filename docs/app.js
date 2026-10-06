@@ -16,6 +16,13 @@
     "#4a6fe3", "#8a5a2b", "#5c9e2e", "#b0306a"];
   const HEADWAYS = [5, 6, 7.5, 10, 12, 15, 20, 30, 40, 45, 60, 90, 120];
   const DATA_URL = new URLSearchParams(location.search).get("data") || "data/plan.json";
+  // Optional page-level switches (used by the single-file build): window.PLAN (embedded data),
+  // window.NO_TILES (no street map), window.SHARE_BASE (address that share links point to).
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const isDark = () => {
+    const t = document.documentElement.dataset.theme;
+    return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  };
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -176,10 +183,13 @@
 
   function initMap() {
     map = L.map("map", { zoomControl: true, preferCanvas: true, renderer, zoomSnap: 0.25 });
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-      maxZoom: 16,
-      attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
-    }).addTo(map);
+    if (!window.NO_TILES) {
+      const base = isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base";
+      L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${base}/MapServer/tile/{z}/{y}/{x}`, {
+        maxZoom: 16,
+        attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
+      }).addTo(map);
+    }
     const pts = D.places.map((p) => [p.lat, p.lon]);
     map.fitBounds(L.latLngBounds(pts), { padding: [12, 12] });
 
@@ -195,7 +205,7 @@
     hubLayer = L.layerGroup().addTo(map);
 
     for (const p of D.places) {
-      L.circleMarker([p.lat, p.lon], { radius: 3, color: "#7d878d", weight: 1, fillColor: "#fff", fillOpacity: 1, renderer })
+      L.circleMarker([p.lat, p.lon], { radius: 3, color: css("--muted"), weight: 1, fillColor: css("--paper"), fillOpacity: 1, renderer })
         .on("click", () => openPlace(p))
         .addTo(placeLayer);
     }
@@ -242,7 +252,7 @@
       const c = colors.get(L2.line.id);
       for (const pid of L2.stops) {
         const p = placeById.get(pid);
-        L.circleMarker([p.lat, p.lon], { radius: sel ? 6 : 4, color: c, weight: sel ? 3 : 2, fillColor: "#fff", fillOpacity: 1, renderer })
+        L.circleMarker([p.lat, p.lon], { radius: sel ? 6 : 4, color: c, weight: sel ? 3 : 2, fillColor: css("--paper"), fillOpacity: 1, renderer })
           .on("click", (ev) => { L.DomEvent.stop(ev); openPlace(p); })
           .addTo(stopLayer);
       }
@@ -261,7 +271,7 @@
     for (const p of D.places) {
       if (!p.deps) continue;
       const ok = (near.get(p.id) || []).some((q) => bph.has(q));
-      if (!ok) L.circleMarker([p.lat, p.lon], { radius: 5, color: "#b3261e", weight: 2, fillColor: "#b3261e", fillOpacity: 0.25, renderer, interactive: false }).addTo(gapLayer);
+      if (!ok) L.circleMarker([p.lat, p.lon], { radius: 5, color: css("--down"), weight: 2, fillColor: css("--down"), fillOpacity: 0.25, renderer, interactive: false }).addTo(gapLayer);
     }
   }
 
@@ -276,7 +286,8 @@
     const placed = [];
     for (const h of scenario().hubs || []) {
       const p = placeById.get(h);
-      const m = L.circleMarker([p.lat, p.lon], { radius: r, color: "#1c2a33", weight: 3, fillColor: "#1c2a33", fillOpacity: 1, renderer })
+      const ink = css("--ink");
+      const m = L.circleMarker([p.lat, p.lon], { radius: r, color: ink, weight: 3, fillColor: ink, fillOpacity: 1, renderer })
         .on("click", (ev) => { L.DomEvent.stop(ev); openPlace(p); })
         .addTo(hubLayer);
       // Label it unless it would overlap a label already on the map.
@@ -628,7 +639,7 @@
     renderList();
     renderDetail();
     drawLines();
-    history.replaceState(null, "", `#${encodeState()}`);
+    try { history.replaceState(null, "", `#${encodeState()}`); } catch (err) { /* sandboxed viewers */ }
     if (refit) {
       const pts = [];
       for (const L2 of current.lines) for (const id of L2.path) { const p = placeById.get(id); pts.push([p.lat, p.lon]); }
@@ -647,11 +658,13 @@
   }
 
   async function main() {
-    let res;
     try {
-      res = await fetch(DATA_URL, { cache: "no-cache" });
-      if (!res.ok) throw new Error(res.status);
-      D = await res.json();
+      if (window.PLAN) D = window.PLAN;
+      else {
+        const res = await fetch(DATA_URL, { cache: "no-cache" });
+        if (!res.ok) throw new Error(res.status);
+        D = await res.json();
+      }
     } catch (err) {
       document.body.innerHTML = `<p style="padding:24px;font-family:var(--font)">The network data didn't load (${esc(err.message)}). ` +
         `Run <code>python -m metrobus_efficiency --web</code> to create <code>docs/data/plan.json</code>, then reload.</p>`;
@@ -678,8 +691,15 @@
     $("back").addEventListener("click", () => { state.selected = null; update(); });
     $("reset").addEventListener("click", () => { state.edits[state.scenario] = {}; update(); toast("Changes undone"); });
     $("share").addEventListener("click", async () => {
-      try { await navigator.clipboard.writeText(location.href); toast("Link copied"); }
-      catch { toast("Copy the address bar to share this version"); }
+      const link = window.SHARE_BASE ? `${window.SHARE_BASE}#${encodeState()}` : location.href;
+      try { await navigator.clipboard.writeText(link); toast("Link copied"); }
+      catch {
+        const box = $("share-link");
+        box.value = link;
+        box.hidden = false;
+        box.select();
+        toast("Copy the selected link");
+      }
     });
     $("grip").addEventListener("click", () => {
       const big = document.querySelector(".app").classList.toggle("map-big");

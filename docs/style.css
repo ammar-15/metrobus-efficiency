@@ -7,12 +7,25 @@
   --focus: #1b6ca8;
   --up: #2e7d4f;
   --down: #b3261e;
+  --map: #dfe4e6;
   --panel-w: 400px;
   --font: "Overpass", "Segoe UI", system-ui, sans-serif;
+}
+/* Dark: harbour at night. Same structure, every colour redefined. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fog: #1b242a; --paper: #12191e; --ink: #e5ebee; --muted: #9babb3; --rule: #2d3a42;
+    --focus: #72b6ec; --up: #63c48f; --down: #ff8077; --map: #1a2227; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fog: #1b242a; --paper: #12191e; --ink: #e5ebee; --muted: #9babb3; --rule: #2d3a42;
+  --focus: #72b6ec; --up: #63c48f; --down: #ff8077; --map: #1a2227; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
+html { background: var(--paper); }
 body {
   font-family: var(--font);
   color: var(--ink);
@@ -24,8 +37,8 @@ body {
 button, input { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
-.app { display: flex; height: 100dvh; }
-.map { flex: 1; height: 100%; background: #dfe4e6; }
+.app { display: flex; height: 100%; }
+.map { flex: 1; height: 100%; background: var(--map); }
 
 /* Panel ------------------------------------------------------------------ */
 .panel {
@@ -208,6 +221,10 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
   width: 100%; padding: 11px 14px 9px; border: 0; border-radius: 9px; cursor: pointer;
   background: var(--ink); color: var(--paper); font-weight: 600;
 }
+.share-link {
+  width: 100%; margin-top: 8px; padding: 7px 8px; border: 1.5px solid var(--rule); border-radius: 7px;
+  background: var(--paper); color: var(--ink); font-size: 12.5px;
+}
 .fine { font-size: 12.5px; color: var(--muted); margin: 14px 0 0; }
 .fine a { color: inherit; }
 
@@ -219,8 +236,12 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 /* Map popups ------------------------------------------------------------------ */
-.leaflet-container { font-family: var(--font); }
+.leaflet-container { font-family: var(--font); background: var(--map); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--paper); color: var(--ink); }
 .leaflet-popup-content-wrapper { border-radius: 10px; }
+.leaflet-bar a, .leaflet-bar a:hover { background: var(--paper); color: var(--ink); border-bottom-color: var(--rule); }
+.leaflet-control-attribution { background: color-mix(in srgb, var(--paper) 80%, transparent) !important; color: var(--muted); }
+.leaflet-control-attribution a { color: var(--muted); }
 .leaflet-popup-content { margin: 12px 14px; font-size: 14px; line-height: 1.4; min-width: 190px; }
 .pop h4 { margin: 0 0 4px; font-size: 15px; font-weight: 800; }
 .pop p { margin: 0 0 8px; color: var(--muted); font-size: 13px; }
@@ -231,9 +252,9 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
   border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); font-weight: 600;
 }
 .pop button.ghost { background: transparent; color: var(--ink); }
-.pop select { width: 100%; padding: 5px; border-radius: 6px; border: 1.5px solid var(--rule); font: inherit; }
+.pop select { width: 100%; padding: 5px; border-radius: 6px; border: 1.5px solid var(--rule); font: inherit; background: var(--paper); color: var(--ink); }
 .hub-label {
-  background: var(--paper); border: 1.5px solid var(--ink); border-radius: 6px; padding: 2px 6px 0;
+  background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink); border-radius: 6px; padding: 2px 6px 0;
   font-weight: 800; font-size: 12px; white-space: nowrap; box-shadow: none;
 }
 .hub-label::before { display: none; }
@@ -241,7 +262,7 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
 /* Phone ------------------------------------------------------------------------- */
 @media (max-width: 760px) {
   .app { flex-direction: column; }
-  .map { flex: none; height: 46dvh; }
+  .map { flex: none; height: 46%; }
   .panel {
     order: 1; width: 100%; height: auto; flex: 1; border: 0; border-top: 1px solid var(--rule);
     padding: 8px 16px 24px;
@@ -254,7 +275,7 @@ h3 { font-size: 15px; font-weight: 800; margin: 18px 0 6px; }
   .grip::after {
     content: ""; position: absolute; left: 7px; right: 7px; top: 7px; height: 4px; border-radius: 2px; background: var(--rule);
   }
-  .app.map-big .map { height: 78dvh; }
+  .app.map-big .map { height: 78%; }
   .leaflet-control-attribution { font-size: 9px; max-width: 70vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .head h1 { font-size: 25px; }
   .stat .v { font-size: 24px; }

@@ -56,6 +56,9 @@ python -m metrobus_efficiency --web     # writes docs/data/plan.json
 python -m http.server -d docs 8000      # then open http://localhost:8000
 ```
 
+**One file you can send around:** `python scripts/single_file.py` bundles the map, its data and styles into
+`output/metrobus-map.html`, which opens straight from disk.
+
 ### How the web map counts
 
 - **Buses** = round-trip minutes × recovery time ÷ minutes between buses, rounded up, per line.
