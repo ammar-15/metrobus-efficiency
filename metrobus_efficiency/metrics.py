@@ -10,7 +10,7 @@ import pandas as pd
 from .config import Config
 from .gtfs import Feed
 from .network import Network, haversine
-from .plan import Line, served_by_trunks
+from .plan import Line, _within_walk, served_by_trunks
 
 FREQUENT_BUSES_PER_HOUR = 8  # both directions combined, ~every 15 min each way
 
@@ -78,7 +78,7 @@ def line_table(lines: list[Line], net: Network, cfg: Config) -> pd.DataFrame:
 
 def proposed_metrics(trunks: list[Line], feeders: list[Line], net: Network, cfg: Config) -> dict:
     covered_frequent = served_by_trunks(net, trunks, cfg)
-    on_feeder = {n for f in feeders for n in f.path}
+    on_feeder = _within_walk(net, [s for f in feeders for s in f.stops], cfg.trunk_catchment_m)
     served = covered_frequent | on_feeder
     weights = net.nodes["departures"].astype(float)
     total_w = max(weights.sum(), 1)

@@ -49,13 +49,13 @@ def build_png(net: Network, hubs: list[int], trunks: list[Line], feeders: list[L
         ax.annotate(str(net.nodes.at[h, "name"]), (x, y), xytext=(6, 6), textcoords="offset points", fontsize=8,
                     weight="bold", zorder=7, bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.8))
 
-    ax.plot([], [], color="#999", lw=2, ls=(0, (4, 3)), label=f"Feeder loops  every {cfg.feeder_headway_min:g} min")
+    ax.plot([], [], color="#999", lw=2, ls=(0, (4, 3)), label=f"Feeder lines  every {cfg.feeder_headway_min:g} min")
     ax.plot([], [], color="#c9cdd2", lw=1, label="Today's network")
     ax.legend(loc="upper left", bbox_to_anchor=(1.01, 1.0), fontsize=8, frameon=False)
     ax.set_aspect("equal")
     ax.set_xticks([])
     ax.set_yticks([])
-    ax.set_title("Metrobus: trunk lines between hubs + feeder loops", fontsize=12)
+    ax.set_title("Metrobus: trunk lines between hubs + feeder lines", fontsize=12)
     for s in ax.spines.values():
         s.set_visible(False)
     out.parent.mkdir(parents=True, exist_ok=True)

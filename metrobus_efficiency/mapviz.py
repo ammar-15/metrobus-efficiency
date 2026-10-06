@@ -105,7 +105,7 @@ def build_map(net: Network, hubs: list[int], trunks: list[Line], feeders: list[L
             ).add_to(tr)
     tr.add_to(m)
 
-    fd = folium.FeatureGroup(name="Proposed feeder loops", show=True)
+    fd = folium.FeatureGroup(name="Proposed feeder lines", show=True)
     for i, f in enumerate(feeders):
         color = FEEDER_COLORS[i % len(FEEDER_COLORS)]
         geom = router.route(_coords(net, _stop_waypoints(net, f)))

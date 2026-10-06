@@ -19,7 +19,7 @@ from .web_export import build_web_data, write_web_data
 
 
 def main(argv: list[str] | None = None) -> None:
-    ap = argparse.ArgumentParser(description="Redesign Metrobus as trunk lines between hubs plus feeder loops.")
+    ap = argparse.ArgumentParser(description="Redesign Metrobus as trunk lines between hubs plus feeder lines.")
     ap.add_argument("--env", help="path to a .env file (default: ./.env)")
     ap.add_argument("--gtfs", help="use this local GTFS zip instead of downloading")
     ap.add_argument("--refresh", action="store_true", help="re-download the feed even if cached")
@@ -58,7 +58,7 @@ def main(argv: list[str] | None = None) -> None:
     trunks, _ = build_trunks(net, hubs, cfg)
     patterns = route_patterns(feed, net)
     feeders, _ = build_feeders(net, hubs, trunks, cfg, patterns)
-    print(f"Plan: {len(trunks)} trunk lines, {len(feeders)} feeder loops")
+    print(f"Plan: {len(trunks)} trunk lines, {len(feeders)} feeder lines")
 
     cur = current_metrics(feed, net)
     prop = proposed_metrics(trunks, feeders, net, cfg)

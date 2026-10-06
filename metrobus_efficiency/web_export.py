@@ -28,10 +28,10 @@ ANNUAL_RIDERSHIP_2025 = 4_933_118
 
 SCENARIOS = [
     # id, label, hub count, trunk headway, feeder headway
-    ("p6", "6 hubs", 6, 10, 20),
-    ("p8", "8 hubs", 8, 10, 20),
-    ("p10", "10 hubs", 10, 10, 20),
-    ("p12", "12 hubs", 12, 10, 20),
+    ("p6", "6 hubs", 6, 10, 30),
+    ("p8", "8 hubs", 8, 10, 30),
+    ("p10", "10 hubs", 10, 10, 30),
+    ("p12", "12 hubs", 12, 10, 30),
 ]
 
 
@@ -222,7 +222,7 @@ def build_web_data(feed: Feed, net: Network, cfg: Config) -> dict:
                 "label": label,
                 "description": (
                     f"{len(trunks)} trunk lines every {th} min between {len(hubs)} hubs, "
-                    f"plus {len(feeders)} feeder loops every {fh} min."
+                    f"plus {len(feeders)} feeder lines every {fh} min."
                 ),
                 "hubs": [int(h) for h in hubs],
                 "lines": [_line_dict(l, net, c, hub_names) for l in trunks + feeders],

@@ -64,10 +64,11 @@ class Config:
     trunk_catchment_m: float = 400.0  # stops within this walk of a trunk stop count as served
     dwell_saving_s: float = 12.0  # average time saved per stop removed from a trunk (decel, dwell, merge)
 
-    # --- feeder loops ---------------------------------------------------------
-    feeder_headway_min: float = 20.0
+    # --- feeder lines ---------------------------------------------------------
+    feeder_headway_min: float = 30.0
     max_loop_min: float = 30.0  # max round-trip running time of one loop
     min_loop_stops: int = 3
+    feeder_join_gap_min: float = 6.0  # join pieces of a route split by a trunk stretch shorter than this
 
     # --- service assumptions ----------------------------------------------------
     service_hours_per_weekday: float = 18.0  # e.g. 6:30 to 00:30
@@ -102,6 +103,7 @@ class Config:
         c.feeder_headway_min = _f("FEEDER_HEADWAY_MIN", c.feeder_headway_min)
         c.max_loop_min = _f("MAX_LOOP_MIN", c.max_loop_min)
         c.min_loop_stops = _i("MIN_LOOP_STOPS", c.min_loop_stops)
+        c.feeder_join_gap_min = _f("FEEDER_JOIN_GAP_MIN", c.feeder_join_gap_min)
         c.service_hours_per_weekday = _f("SERVICE_HOURS_PER_WEEKDAY", c.service_hours_per_weekday)
         c.layover_factor = _f("LAYOVER_FACTOR", c.layover_factor)
         return c

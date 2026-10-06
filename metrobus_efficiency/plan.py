@@ -1,4 +1,4 @@
-"""Hub selection, trunk lines between hubs, and feeder loops around each hub."""
+"""Hub selection, trunk lines between hubs, and feeder lines built from today's routes."""
 
 from __future__ import annotations
 
@@ -251,7 +251,7 @@ def build_trunks(net: Network, hubs: list[int], cfg: Config) -> tuple[list[Line]
         run_s = net.path_time(path) - removed * cfg.dwell_saving_s
         flags = []
         if run_s < cfg.min_trunk_min * 60:
-            flags.append("short: could run as an extension of a feeder loop instead")
+            flags.append("short: could run as an extension of a feeder line instead")
         lines.append(
             Line(
                 name=f"T{len(lines) + 1}",
@@ -348,7 +348,18 @@ def build_feeders(
         if not (set(path) & need):
             continue
         outside = [n not in covered for n in path]
-        for a, b in _runs(outside, max_gap=3):
+        runs = _runs(outside, max_gap=3)
+        # Join pieces of one route that only dip through trunk territory briefly (and skip no hub).
+        joined: list[tuple[int, int]] = []
+        for a, b in runs:
+            if joined:
+                pa, pb = joined[-1]
+                gap = path[pb : a + 1]
+                if _segment_time(net, gap) <= cfg.feeder_join_gap_min * 60 and not (set(gap[1:-1]) & hub_set):
+                    joined[-1] = (pa, b)
+                    continue
+            joined.append((a, b))
+        for a, b in joined:
             if not (set(path[a : b + 1]) & need):
                 continue
             # Extend along the route to the nearest trunk stop at each end, so riders can transfer.
@@ -399,4 +410,38 @@ def build_feeders(
             for n in served & need:
                 owner[n] = len(feeders) - 1
             need -= served
+    feeders = _merge_opposite_directions(net, feeders, cfg)
     return feeders, owner
+
+
+def _merge_opposite_directions(net: Network, feeders: list[Line], cfg: Config) -> list[Line]:
+    """Routes that go out one way and come back another become one loop, not two two-way lines."""
+
+    def close(a: int, b: int) -> bool:
+        return a == b or net.dist_m(a, b) <= cfg.hub_merge_radius_m
+
+    out: list[Line] = []
+    used: set[int] = set()
+    for i, f in enumerate(feeders):
+        if i in used:
+            continue
+        for j in range(i + 1, len(feeders)):
+            g = feeders[j]
+            if j in used or g.source != f.source or not f.two_way or not g.two_way:
+                continue
+            if close(f.path[-1], g.path[0]) and close(g.path[-1], f.path[0]):
+                path = f.path + (g.path[1:] if g.path[0] == f.path[-1] else g.path)
+                stops = list(dict.fromkeys(f.stops + g.stops))
+                f = Line(
+                    name=f.name, kind="feeder", path=path, stops=stops,
+                    run_min=f.run_min + g.run_min, headway_min=f.headway_min,
+                    hub=f.hub, hubs=list(dict.fromkeys(f.hubs + g.hubs)),
+                    flags=[x for x in f.flags if not x.startswith("few stops")] if len(stops) >= cfg.min_loop_stops else f.flags,
+                    two_way=False, source=f.source,
+                )
+                used.add(j)
+                break
+        out.append(f)
+    for k, f in enumerate(out):
+        f.name = f"F{k + 1}"
+    return out

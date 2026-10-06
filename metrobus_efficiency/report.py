@@ -116,9 +116,9 @@ Today: {cur['routes']} routes, {cur['weekday_trips']:,} weekday trips, {cur['sto
 {_md_table(comp)}
 
 Proposed: **{prop['trunk_lines']} trunk lines** every {cfg.trunk_headway_min:g} min and
-**{prop['feeder_loops']} feeder loops** every {cfg.feeder_headway_min:g} min,
+**{prop["feeder_loops"]} feeder lines** every {cfg.feeder_headway_min:g} min,
 running {cfg.service_hours_per_weekday:g} h per weekday. {prop['served_places_pct']}% of today's places stay served
-by a trunk stop within {cfg.trunk_catchment_m:g} m or a feeder loop.
+by a trunk stop within {cfg.trunk_catchment_m:g} m or a feeder stop.
 
 ## Hubs
 
@@ -138,7 +138,7 @@ by a trunk stop within {cfg.trunk_catchment_m:g} m or a feeder loop.
 - *Peak buses today* counts trips running at the same moment, a lower bound on today's fleet in service.
 - Trunk running times come from today's scheduled times between stops, minus {cfg.dwell_saving_s:g} s for every stop
   removed by consolidating to ~{cfg.trunk_stop_spacing_m:g} m spacing. No bus lanes or signal priority are assumed.
-- Feeder loops start and end at a hub, so every feeder trip connects to every trunk line at that hub.
+- Feeder lines follow today's routes where they serve stops away from the trunks, and end at a trunk stop so riders can transfer.
 - This is a planning sketch from schedule data, not ridership. It shows where frequency could go for a similar
   number of buses; real proposals need boarding counts, street checks and public input.
 """
