@@ -1,6 +1,6 @@
 # Metrobus trunk-and-feeder plan
 
-Generated from the Metrobus GTFS schedule for **2026-11-02** (busiest weekday in the feed).
+Generated from the Metrobus GTFS schedule for **2026-11-09** (busiest weekday in the feed).
 Today: 22 routes, 861 weekday trips, 923 stops
 (grouped into 712 places after merging paired stops across the street).
 
